@@ -101,20 +101,20 @@ if (_uid call isAdmin) then
 					closeDialog 0;
 					execVM "client\systems\vehicleStore\loadVehicleStore.sqf";
 				};
-				case 3: //Access Respawn Dialog
+				case 3: //Access ATM Dialog
+				{
+					closeDialog 0;
+					call mf_items_atm_access;
+				};
+				case 4: //Access Respawn Dialog
 				{
 					closeDialog 0;
 					true spawn client_respawnDialog;
 				};
-				case 4: //Access Proving Grounds
+				case 5: //Access Proving Grounds
 				{
 					closeDialog 0;
 					createDialog "balca_debug_main";
-				};
-				case 5: //Access personal ATM"
-				{
-					closeDialog 0;
-					[player] call bank_menu_dialog;
 				};
 				case 6: //Show server FPS function
 				{

@@ -138,10 +138,8 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\camera\functions.sqf";			// Improved admin camera
 [] execVM "addons\cctv\functions.sqf";				// CCTV Camera
 
-if (["A3W_teamPlayersMap"] call isConfigOn) then
-{
-	[] execVM "client\functions\drawPlayerMarkers.sqf";
-};
+call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
+[] execVM "client\functions\drawPlayerMarkers.sqf";
 
 // update player's spawn beacon
 {

@@ -14145,7 +14145,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.40000001;
-			init="this setpos [23743.838, 17362.211, 0.5];";
+			init="[this] call A3W_fnc_setupMissionATM; this setpos [23743.838, 17362.211, 0.5];";
 		};
 		class Item1160
 		{
