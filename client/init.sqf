@@ -25,6 +25,9 @@ groupManagmentActive = false;
 pvar_PlayerTeamKiller = objNull;
 doCancelAction = false;
 
+//AJ Beacondetector
+BeaconScanInProgress = false;
+
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
@@ -94,7 +97,7 @@ if (isNil "playerData_alive") then
 
 player call playerSetupEnd;
 
-diag_log format ["Player starting with $%1", (player getVariable ["cmoney", 0]) call fn_numToStr];
+diag_log format ["Player starting with $%1", player getVariable ["cmoney", 0]];
 
 [] execVM "territory\client\hideDisabledTerritories.sqf";
 
@@ -132,12 +135,16 @@ A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "client\functions\drawPlayerIcons.sqf";
 [] execVM "addons\far_revive\FAR_revive_init.sqf";
-[] execVM "addons\camera\functions.sqf";
+[] execVM "addons\camera\functions.sqf";			// Improved admin camera
+[] execVM "addons\bank\functions.sqf";				// ATM script
+[] execVM "addons\cctv\functions.sqf";				// CCTV Camera
 
-call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
-[] execVM "client\functions\drawPlayerMarkers.sqf";
+if (["A3W_teamPlayersMap"] call isConfigOn) then
+{
+	[] execVM "client\functions\drawPlayerMarkers.sqf";
+};
 
-// update player's spawn beaoon
+// update player's spawn beacon
 {
 	if (_x getVariable ["ownerUID",""] == getPlayerUID player) then
 	{

@@ -37,7 +37,6 @@ publicVariable "currentInvites";
 	["pvar_removeNegativeScore", { PVAL call removeNegativeScore }],
 	["pvar_convertTerritoryOwner", { PVAL call convertTerritoryOwner }],
 	["pvar_enableSimulationGlobal", { PVAL call fn_enableSimulationGlobal }],
-	["pvar_enableSimulationServer", { PVAL call fn_enableSimulationServer }],
 	["pvar_parachuteLiftedVehicle", { PVAL spawn parachuteLiftedVehicle }],
 	["pvar_spawnStoreObject", { PVAL call spawnStoreObject }],
 	["pvar_processGroupInvite", { PVAL call processGroupInvite }],

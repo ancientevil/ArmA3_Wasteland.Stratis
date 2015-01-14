@@ -128,7 +128,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
-			_object setVariable ["ownerUID", getPlayerUID _player];
+			_object setVariable ["ownerUID", getPlayerUID _player, true]; // Added true for vehicle locking.
 
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
@@ -193,7 +193,25 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					{
 						_object setAmmoCargo 5;
 					};
+					
+					//Disable damage on store crate
+					case ({_object isKindOf _x} count ["Box_NATO_Ammo_F"] > 0):
+					{
+						_object allowDamage false;
+					};
 
+					// Add food to bought food sacks.
+					case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
+					{
+						_object setVariable ["food", 50, true];
+					};
+					
+					// Add water to bought water barrels.
+					case ({_object isKindOf _x} count ["Land_BarrelWater_F"] > 0):
+					{
+						_object setVariable ["water", 50, true];
+					};
+						
 					case (_object isKindOf "O_Heli_Transport_04_ammo_F"):
 					{
 						_object setAmmoCargo 10;

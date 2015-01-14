@@ -26,7 +26,7 @@ addMissionEventHandler ["HandleDisconnect",
 	{
 		if (!(_unit getVariable ["playerSpawning", false]) && typeOf _unit != "HeadlessClient_F") then
 		{
-			[_uid, [["BankMoney", _unit getVariable ["bmoney", 0]]], [_unit, false] call fn_getPlayerData] spawn fn_saveAccount;
+			[_uid, [], [_unit, false] call fn_getPlayerData] spawn fn_saveAccount;
 		};
 
 		deleteVehicle _unit;
@@ -42,6 +42,7 @@ addMissionEventHandler ["HandleDisconnect",
 
 //Execute Server Side Scripts.
 call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
+[] execVM (externalConfigFolder + "\donators.sqf"); // donators
 [] execVM "server\admins.sqf";
 [] execVM "server\functions\serverVars.sqf";
 _serverCompileHandle = [] spawn compile preprocessFileLineNumbers "server\functions\serverCompile.sqf"; // scriptDone stays stuck on false when using execVM on Linux
@@ -97,14 +98,7 @@ forEach
 	"A3W_spawnBeaconSpawnHeight",
 	"A3W_purchasedVehicleSaving",
 	"A3W_missionVehicleSaving",
-	"A3W_missionFarAiDrawLines",
-	"A3W_atmEnabled",
-	"A3W_atmMaxBalance",
-	"A3W_atmTransferFee",
-	"A3W_atmTransferAllTeams",
-	"A3W_atmEditorPlacedOnly",
-	"A3W_atmMapIcons",
-	"A3W_atmRemoveIfDisabled"
+	"A3W_missionFarAiDrawLines"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
@@ -116,11 +110,12 @@ _staticWeaponSavingOn = ["A3W_staticWeaponSaving"] call isConfigOn;
 _warchestSavingOn = ["A3W_warchestSaving"] call isConfigOn;
 _warchestMoneySavingOn = ["A3W_warchestMoneySaving"] call isConfigOn;
 _beaconSavingOn = ["A3W_spawnBeaconSaving"] call isConfigOn;
+_cameraSavingOn = ["A3W_cctvCameraSaving"] call isConfigOn;
 
 _purchasedVehicleSavingOn = ["A3W_purchasedVehicleSaving"] call isConfigOn;
 _missionVehicleSavingOn = ["A3W_missionVehicleSaving"] call isConfigOn;
 
-_serverSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn || _purchasedVehicleSavingOn || _missionVehicleSavingOn);
+_serverSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _cameraSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn || _purchasedVehicleSavingOn || _missionVehicleSavingOn);
 _vehicleSavingOn = (_purchasedVehicleSavingOn || _purchasedVehicleSavingOn);
 
 _setupPlayerDB = scriptNull;
@@ -250,6 +245,7 @@ if (_playerSavingOn || _serverSavingOn) then
 		["vehicleSaving", _vehicleSavingOn],
 		["boxSaving", _boxSavingOn],
 		["staticWeaponSaving", _staticWeaponSavingOn],
+		["cctvCameraSaving", _cameraSavingOn],
 		["warchestSaving", _warchestSavingOn],
 		["warchestMoneySaving", _warchestMoneySavingOn],
 		["spawnBeaconSaving", _beaconSavingOn]
@@ -323,15 +319,7 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 	{
 		call compile preprocessFileLineNumbers "server\functions\boxSpawning.sqf";
 	};
-
-	if (["A3W_vehicleSpawning"] call isConfigOn || ["A3W_boatSpawning"] call isConfigOn) then
-	{
-		execVM "server\spawning\vehicleRespawnManager.sqf";
-	};
 };
-
-A3W_serverSpawningComplete = compileFinal "true";
-publicVariable "A3W_serverSpawningComplete";
 
 if (count (["config_territory_markers", []] call getPublicVar) > 0) then
 {

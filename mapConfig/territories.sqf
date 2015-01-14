@@ -13,7 +13,7 @@
 
 [
 	["TERRITORY_THRONOS_CASTLE", "Thronos Castle", 500, "CASTLE"],
-	//["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 500, "CASTLE"],
+	["TERRITORY_KASTRO_CASTLE", "Kastro Castle", 500, "CASTLE"],
 	["TERRITORY_SW_AIRFIELD", "AAC Airfield", 500, "AIRFIELD"],
 	["TERRITORY_MAIN_AIRBASE_SW", "Altis Airport (SW)", 750, "AIRBASE"],
 	["TERRITORY_MAIN_AIRBASE_CENTER", "Altis Airport (Center)", 750, "AIRBASE"],
