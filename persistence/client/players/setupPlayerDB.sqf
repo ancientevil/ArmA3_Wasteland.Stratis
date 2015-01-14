@@ -37,6 +37,8 @@ fn_deletePlayerData =
 		_data = _this;
 		_saveValid = [_data, "PlayerSaveValid", false] call fn_getFromPairs;
 
+		private "_pos";
+
 		if (_saveValid) then
 		{
 			playerData_alive = true;
@@ -45,7 +47,7 @@ fn_deletePlayerData =
 			_preload = profileNamespace getVariable ["A3W_preloadSpawn", true];
 
 			{ if (typeName _x == "STRING") then { _pos set [_forEachIndex, parseNumber _x] } } forEach _pos;
-			
+
 			if (count _pos == 2) then { _pos set [2, 0] };
 			if (count _pos == 3) then
 			{
@@ -73,15 +75,12 @@ fn_deletePlayerData =
 
 		if (_saveValid) then
 		{
-			player groupChat "Player account loaded!";
-
 			if (isNil "playerData_resetPos") then
 			{
-				player enableSimulation true;
-				player allowDamage true;
-				player setVelocity [0,0,0];
-
 				execVM "client\functions\firstSpawn.sqf";
+
+				playerData_spawnPos = _pos;
+				playerData_spawnDir = [_data, "Direction"] call fn_getFromPairs;
 			}
 			else
 			{
