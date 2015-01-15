@@ -7,7 +7,7 @@
 #define REARM_TIME_SLICE 10
 #define REPAIR_TIME_SLICE 1
 #define REFUEL_TIME_SLICE 1
-#define PRICE_RELATIONSHIP 16
+#define PRICE_RELATIONSHIP 32
 
 
 // Check if mutex lock is active.
