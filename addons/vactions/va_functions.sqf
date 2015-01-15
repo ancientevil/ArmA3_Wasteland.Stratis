@@ -249,9 +249,9 @@ va_information_action = {
      ["   Grid:       ", mapGridPosition _vehicle],
      ["   Altitude:   ", str(round(getposASL _vehicle select 2)) + " meter(s) ASL"],
      ["   Driver:     ", ([_driver,17] call str_truncate)],
-     ["   Seats:     ", str((_vehicle emptyPositions "cargo")+(_vehicle emptyPositions "driver")) + " seat(s)"],
+     ["   Seats:      ", str((_vehicle emptyPositions "cargo")+(_vehicle emptyPositions "driver")) + " seat(s)"],
      ["   Size:       ", str(round((sizeOf _class)*10)/10) + " meter(s)"],
-     ["   Owner:     ",  ([_owner,17] call str_truncate)]
+     ["   Owner:      ", ([_owner,17] call str_truncate)]
 
       
     ]);
