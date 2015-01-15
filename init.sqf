@@ -74,5 +74,6 @@ if (isServer) then
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
 
 [] execVM "addons\scripts\intro.sqf";					// Welcome intro
