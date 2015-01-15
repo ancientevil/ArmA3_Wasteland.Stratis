@@ -1,37 +1,36 @@
 //	@file Name: chopShop.sqf
-//	@file Author: Cael817, Lodac, Wiking, Gigatek (original auth)
+//	@file Author: Lodac, Wiking, Gigatek ,Cael817
 
-
-//#define CHOPSHOP_VEHICLE_DISTANCE 20
 #define CHOPSHOP_PRICE_RELATIONSHIP 2
 
 private ["_vehicle", "_object", "_driver", "_eng", "_type", "_price", "_confirmMsg", "_playerMoney", "_vehicleCrewArr", "_text"];
-// _vehicle = vehicle player; // Used when activated by a player action.
-_vehicle = _this;
+_vehicle = vehicle player;
 _driver = driver _vehicle;
 _eng = isengineon _vehicle;
 _vehicle setVelocity [0,0,0];
 
-if (_eng) then {
+if (_eng) then 
+{
 	_vehicle vehicleChat format ["Stop engine in 10s or try with engine off, to sell vehicle. You will get 1/2 of the vehicle store price,  stay in the vehicle until next message appear."];
 	sleep 10;
 	_eng = isengineon _vehicle;
 	if (_eng) exitWith {_vehicle vehicleChat format ["Engine still running. Deal CANCELED!"];};
 };
 
-if((player == driver _vehicle) && (!_eng))then {
+if ((player == driver _vehicle) && (!_eng)) then 
+{
 	_type = typeOf _vehicle;
 	_playerMoney = player getVariable "cmoney";
 
 	_price = 300;
 	//find price from vehicle store prices
 	{	
-	if (_type == _x select 1) then
-	{	
-	_price = _x select 2;
-	_price = _price / CHOPSHOP_PRICE_RELATIONSHIP;
-	};
-} forEach (call allVehStoreVehicles);
+		if (_type == _x select 1) then
+		{	
+		_price = _x select 2;
+		_price = _price / CHOPSHOP_PRICE_RELATIONSHIP;
+		};
+	} forEach (call allVehStoreVehicles);
 
 	if (!isNil "_price") then 
 	{
@@ -41,20 +40,19 @@ if((player == driver _vehicle) && (!_eng))then {
 
 		// Display confirm message
 		if ([parseText _confirmMsg, "Confirm", "SELL", true] call BIS_fnc_guiMessage) then
-		{	
-			// Ensure the player has enough money
-			/*
-			if (_price > _playerMoney) exitWith
-			{
-				hint format ["You need $%2 to change ownership on %1", _type, _price];
-				playSound "FD_CP_Not_Clear_F";
-			};*/
+		{
+	
 			// get everyone out of the vehicle
 			_vehicleCrewArr = crew _vehicle;
 			{
-				_x action ["Eject", vehicle _x];
+				_x action ["getout", vehicle _x];
 			} foreach _vehicleCrewArr;
-
+			
+			_vehicle setVariable ["ownerUID", nil];
+			_vehicle setVariable ["driverUID", nil];
+			//[[netId _vehicle, 2], "A3W_fnc_setLockState", _vehicle] call A3W_fnc_MP; // Lock
+			_vehicle lock true;
+			
 			player setVariable["cmoney",(player getVariable "cmoney")+_price,true];
 			player setVariable["timesync",(player getVariable "timesync")+(_price * 3),true];
 			[] spawn fn_savePlayerData; // Changed call to spawn
