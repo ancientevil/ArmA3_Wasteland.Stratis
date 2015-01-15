@@ -4,7 +4,8 @@
 #define CHOPSHOP_PRICE_RELATIONSHIP 2
 
 private ["_vehicle", "_object", "_driver", "_eng", "_type", "_price", "_confirmMsg", "_playerMoney", "_vehicleCrewArr", "_text"];
-_vehicle = vehicle player;
+//_vehicle = vehicle player; // use this if you have an addaction to an object
+_vehicle = _this; // changed because of use with trigger
 _driver = driver _vehicle;
 _eng = isengineon _vehicle;
 _vehicle setVelocity [0,0,0];
