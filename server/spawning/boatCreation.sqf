@@ -22,7 +22,7 @@ _pos = _markerPos;
 //Car Initialization
 _boat = createVehicle [_boatType, _pos, [], 0, "None"];
 
-_boat setPosASL [_pos select 0, _pos select 1, 0];
+_boat setPosASL [_pos select 0, _pos select 1, 0.5];
 _boat setDir random 360;
 _boat setVelocity [0,0,0];
 
