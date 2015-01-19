@@ -18,7 +18,7 @@ currentStaticHelis = []; // Storage for the heli marker numbers so that we don't
 //Civilian Vehicle List - Random Spawns
 civilianVehicles =
 [
-	"C_Quadbike_01_F",
+//	"C_Quadbike_01_F",
 	"C_Hatchback_01_F",
 	"C_Hatchback_01_sport_F",
 	"C_SUV_01_F",
@@ -31,10 +31,10 @@ civilianVehicles =
 //Light Military Vehicle List - Random Spawns
 lightMilitaryVehicles =
 [
-	"B_Quadbike_01_F",
-	"O_Quadbike_01_F",
-	"I_Quadbike_01_F",
-	"I_G_Quadbike_01_F",
+//	"B_Quadbike_01_F",
+//	"O_Quadbike_01_F",
+//	"I_Quadbike_01_F",
+//	"I_G_Quadbike_01_F",
 	"O_Truck_02_covered_F",
 	"I_Truck_02_covered_F",
 	"O_Truck_02_transport_F",
