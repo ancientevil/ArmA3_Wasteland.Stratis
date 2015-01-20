@@ -34,7 +34,8 @@ LCK_nlunited = [
 	"76561198042152631", // Arjan desktop 
 	"76561197968977258", // NSG
 	"76561198094689789", // Kale
-	"76561197990561514"  // DonPoedel
+	"76561197990561514", // DonPoedel
+	"76561197964609822"  // Tinux
 ];
 
 if ((getPlayerUID player) in LCK_nlunited) then {
