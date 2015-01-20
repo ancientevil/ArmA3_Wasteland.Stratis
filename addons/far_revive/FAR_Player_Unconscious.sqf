@@ -217,12 +217,6 @@ _unit spawn
 		unassignVehicle _unit;
 		moveOut _unit;
 	};
-	
-	if (!alive _unit) then
-	{
-		unassignVehicle _unit;		
-		moveOut _unit;
-	};
 };
 
 sleep 2;
