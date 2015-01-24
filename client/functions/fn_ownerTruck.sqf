@@ -17,6 +17,13 @@ _truck = _this select 0;
 _unit = _this select 1;
 _vehicle = vehicle _unit;
 
+//check if caller is the driver
+if (_unit != driver _vehicle) exitWith
+{
+	["You must be in the driver seat to sell a vehicle.", 5] call mf_notify_client;
+	mutexScriptInProgress = false;
+};
+
 //check if caller is not in vehicle
 if (_vehicle == _unit) exitWith
 {
