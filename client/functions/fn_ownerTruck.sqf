@@ -20,7 +20,7 @@ _vehicle = vehicle _unit;
 //check if caller is the driver
 if (_unit != driver _vehicle) exitWith
 {
-	["You must be in the driver seat to sell a vehicle.", 5] call mf_notify_client;
+	["You must be in the driver seat to change owneship.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
 
