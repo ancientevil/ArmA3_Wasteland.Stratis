@@ -84,6 +84,7 @@ class Mission
 		"A3_Structures_F_System",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Data_F",
+		"a3_roads_f",
 		"A3_Structures_F_Ind_SolarPowerPlant",
 		"A3_Structures_F_EPC_Dominants_GhostHotel",
 		"A3_Structures_F_Ind_DieselPowerPlant",
@@ -18260,7 +18261,7 @@ class Mission
 		};
 		class Item1561
 		{
-			position[]={3139.0911,-0.0040591764,12572.037};
+			position[]={3277.6311,2.5104628,12540.548};
 			azimut=-302.05264;
 			id=1726;
 			side="EMPTY";
@@ -18332,8 +18333,8 @@ class Mission
 		};
 		class Item1567
 		{
-			position[]={3627.7737,0.00010811966,10918.969};
-			azimut=315.72073;
+			position[]={3700.8125,7.529664,10887.828};
+			azimut=275.75192;
 			id=1732;
 			side="EMPTY";
 			vehicle="B_Truck_01_box_F";
@@ -20133,7 +20134,7 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={3139.1086,-0.0042424775,12572.244};
+			position[]={3277.6487,2.4613295,12540.755};
 			name="Owner_Truck_3";
 			text="Owner_Truck_3";
 			type="Empty";
@@ -20181,7 +20182,7 @@ class Mission
 		};
 		class Item237
 		{
-			position[]={3627.8713,9.8696772e-005,10919.154};
+			position[]={3700.9102,7.5281467,10888.014};
 			name="Sell_Truck_5";
 			text="Sell_Truck_5";
 			type="Empty";
