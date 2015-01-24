@@ -1,6 +1,8 @@
-//	@file Name: changeOwner.sqf
-//	@file Author: Cael817 based on fn_chopShop.sqf from Lodac, Wiking, Gigatek (original auth)
-
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Name: fn_sellTruck.sqf
+//	@file Author: Gigatek, Wiking, Lodac, Cael817, LouD
 
 #define CHANGEOWNER_VEHICLE_DISTANCE 20
 #define CHANGEOWNER_PRICE_RELATIONSHIP 2
@@ -46,7 +48,6 @@ _price = 500; // price = 100 for vehicles not found in vehicle store.
 _text = format ["Stop engine in 10s or try with engine off, to change ownership. Price is 1/2 of vehicle store price, stay in the vehicle until the next message appears.", _price];
 [_text, 5] call mf_notify_client;
 
-
 uiSleep 10;
 
 if (isEngineOn _vehicle) exitWith
@@ -70,73 +71,73 @@ if (_vehicle distance _truck > CHANGEOWNER_VEHICLE_DISTANCE || vehicle _unit != 
 };
 
 if (!isNil "_price") then 
-	{
-		// Add total sell value to confirm message
-		_confirmMsg = format ["Changing ownership on %1 will cost you $%2 for:<br/>", _vehClass, _price];
-		_confirmMsg = _confirmMsg + format ["<br/><t font='EtelkaMonospaceProBold'>1</t> x %1", _vehClass];
+{
+	// Add total sell value to confirm message
+	_confirmMsg = format ["Changing ownership on %1 will cost you $%2 for:<br/>", _vehClass, _price];
+	_confirmMsg = _confirmMsg + format ["<br/><t font='EtelkaMonospaceProBold'>1</t> x %1", _vehClass];
 
-		// Display confirm message
-		if ([parseText _confirmMsg, "Confirm", "OK", true] call BIS_fnc_guiMessage) then
-		{	
-			// Ensure the player has enough money
-			if (_price > _playerMoney) exitWith
-			{
-				hint format ["You need $%2 to change ownership on %1", _vehClass, _price];
-				playSound "FD_CP_Not_Clear_F";
-			};
-
-			// get everyone out of the vehicle
-			_vehicleCrewArr = crew _vehicle;
-			{
-				_x action ["Eject", vehicle _x];
-			} foreach _vehicleCrewArr;
-			
-			_vehicle lock true;
-		
-			player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
-			player setVariable["timesync",(player getVariable "timesync")+(_price * 3),true];
-			[] spawn fn_savePlayerData; // Changed call to spawn
-			["Changing ownership will take about 1 minute", 10] call mf_notify_client;
-			playSound "FD_Finish_F";
-			_vehicle setVelocity [0,0,0];
-			_vehicle setFuel 0;
-			_text = format ["Changing owner for %1 for $%2. Removing VIN, emptying fluids, and removing ammo.", _vehClass, _price];
-			[_text, 5] call mf_notify_client;
-
-			sleep 5;
-			["You know this shit isn't easy and you are not paying much.", 5] call mf_notify_client;
-			sleep 5;
-			["Drinking coffee not giving a shit about you.", 5] call mf_notify_client;
-			sleep 5;
-			["Installing new locks.", 5] call mf_notify_client;
-			sleep 5;
-			["Adding new VIN", 5] call mf_notify_client;
-			sleep 5;		
-			["Taking another coffee break.", 5] call mf_notify_client;
-			sleep 5;
-			["Looking funny at you.", 5] call mf_notify_client;
-			sleep 5;
-			["Repairing.", 5] call mf_notify_client;
-			_vehicle setDamage 0;
-			sleep 5;
-			["Rearming.", 5] call mf_notify_client;
-			_vehicle setVehicleAmmo 1;
-			sleep 5;
-			["Finishing up and refuelling.", 5] call mf_notify_client;
-
-			_vehicle setVelocity [0,0,0];
-			_vehicle setFuel 1;
-			_vehicle setVariable ["A3W_purchasedVehicle", true, true];
-			_vehicle setVariable ["ownerUID", getPlayerUID player, true];
-			//_vehicle setVariable ["vehOwnerName", name player, true];
-			_vehicle setVariable ["ownedVehicle", true, true];
-			playSound "FD_Finish_F";
-			_text = format ["%1 Is now yours to lock and it saves too. It is also fully repaired and refuelled.", _vehClass];
-			[_text, 10] call mf_notify_client;
-			mutexScriptInProgress = false;
+	// Display confirm message
+	if ([parseText _confirmMsg, "Confirm", "OK", true] call BIS_fnc_guiMessage) then
+	{	
+		// Ensure the player has enough money
+		if (_price > _playerMoney) exitWith
+		{
+			hint format ["You need $%2 to change ownership on %1", _vehClass, _price];
+			playSound "FD_CP_Not_Clear_F";
 		};
-	} else {
-		hint parseText "<t color='#ffff00'>An unknown error occurred.</t><br/>Cancelled.";
-		playSound "FD_CP_Not_Clear_F";
+
+		// get everyone out of the vehicle
+		_vehicleCrewArr = crew _vehicle;
+		{
+			_x action ["Eject", vehicle _x];
+		} foreach _vehicleCrewArr;
+		
+		_vehicle lock true;
+	
+		player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
+		player setVariable["timesync",(player getVariable "timesync")+(_price * 3),true];
+		[] spawn fn_savePlayerData; // Changed call to spawn
+		["Changing ownership will take about 1 minute", 10] call mf_notify_client;
+		playSound "FD_Finish_F";
+		_vehicle setVelocity [0,0,0];
+		_vehicle setFuel 0;
+		_text = format ["Changing owner for %1 for $%2. Removing VIN, emptying fluids, and removing ammo.", _vehClass, _price];
+		[_text, 5] call mf_notify_client;
+
+		sleep 5;
+		["You know this shit isn't easy and you are not paying much.", 5] call mf_notify_client;
+		sleep 5;
+		["Drinking coffee not giving a shit about you.", 5] call mf_notify_client;
+		sleep 5;
+		["Installing new locks.", 5] call mf_notify_client;
+		sleep 5;
+		["Adding new VIN", 5] call mf_notify_client;
+		sleep 5;		
+		["Taking another coffee break.", 5] call mf_notify_client;
+		sleep 5;
+		["Looking funny at you.", 5] call mf_notify_client;
+		sleep 5;
+		["Repairing.", 5] call mf_notify_client;
+		_vehicle setDamage 0;
+		sleep 5;
+		["Rearming.", 5] call mf_notify_client;
+		_vehicle setVehicleAmmo 1;
+		sleep 5;
+		["Finishing up and refuelling.", 5] call mf_notify_client;
+
+		_vehicle setVelocity [0,0,0];
+		_vehicle setFuel 1;
+		_vehicle setVariable ["A3W_purchasedVehicle", true, true];
+		_vehicle setVariable ["ownerUID", getPlayerUID player, true];
+		//_vehicle setVariable ["vehOwnerName", name player, true];
+		_vehicle setVariable ["ownedVehicle", true, true];
+		playSound "FD_Finish_F";
+		_text = format ["%1 Is now yours to lock and it saves too. It is also fully repaired and refuelled.", _vehClass];
+		[_text, 10] call mf_notify_client;
 		mutexScriptInProgress = false;
 	};
+} else {
+	hint parseText "<t color='#ffff00'>An unknown error occurred.</t><br/>Cancelled.";
+	playSound "FD_CP_Not_Clear_F";
+	mutexScriptInProgress = false;
+};
