@@ -82,8 +82,10 @@ if (!isNil "_price") then
 		// Ensure the player has enough money
 		if (_price > _playerMoney) exitWith
 		{
-			hint format ["You need $%2 to change ownership on %1", _vehClass, _price];
+			_text = format ["You need $%2 to change ownership on %1", _vehClass, _price];
+			[_text, 5] call mf_notify_client;
 			playSound "FD_CP_Not_Clear_F";
+			mutexScriptInProgress = false;
 		};
 
 		// get everyone out of the vehicle
