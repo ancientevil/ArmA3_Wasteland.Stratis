@@ -769,7 +769,7 @@ colorsArray = compileFinal str
 			["Orange", _color + "(0.4,0.09,0,1)"], // #(argb,8,8,3)color(1,0.5,0,0.4)
 			["Red", _color + "(0.45,0.005,0,1)"], // #(argb,8,8,3)color(1,0.1,0,0.3)
 			["Pink", _color + "(0.5,0.03,0.3,1)"], // #(argb,8,8,3)color(1,0.06,0.6,0.5)
-			["Purple", _color + "(0.1,0,0.3,1)"]/*, // #(argb,8,8,3)color(0.8,0,1,0.1)
+			["Purple", _color + "(0.1,0,0.3,1)"], // #(argb,8,8,3)color(0.8,0,1,0.1)
 			["NATO Tan", _texDir + "nato.jpg"], // #(argb,8,8,3)color(0.584,0.565,0.515,0.3)
 			["CSAT Brown", _texDir + "csat.jpg"], // #(argb,8,8,3)color(0.624,0.512,0.368,0.3)
 			["AAF Green", _texDir + "aaf.jpg"], // #(argb,8,8,3)color(0.546,0.59,0.363,0.2)
@@ -785,7 +785,7 @@ colorsArray = compileFinal str
 			["Yellow Camo", _texDir + "camo_fuel.jpg"],
 			["Orange Camo", _texDir + "camo_fack.jpg"],
 			["Red Camo", _texDir + "camo_deser.jpg"],
-			["Pink Camo", _texDir + "camo_pank.jpg"]*/
+			["Pink Camo", _texDir + "camo_pank.jpg"]
 		]
 	],
 	[ // Kart colors
