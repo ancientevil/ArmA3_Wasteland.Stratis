@@ -48,6 +48,7 @@ addMissionEventHandler ["HandleDisconnect",
 //Execute Server Side Scripts.
 call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
 [] execVM (externalConfigFolder + "\donators.sqf"); // donators
+[] execVM (externalConfigFolder + "\nlunited.sqf");	// NL United
 [] execVM "server\admins.sqf";
 [] execVM "server\functions\serverVars.sqf";
 _serverCompileHandle = [] spawn compile preprocessFileLineNumbers "server\functions\serverCompile.sqf"; // scriptDone stays stuck on false when using execVM on Linux
