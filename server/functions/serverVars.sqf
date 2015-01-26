@@ -199,7 +199,10 @@ vehicleAddition =
 	"Medikit",
 	"Medikit",
 	"FirstAidKit",
-	"ToolKit"
+	"ToolKit",
+	"H_HelmetIA",
+	"V_HarnessO_brn",
+	"MiniGrenade"
 ];
 
 vehicleAddition2 =
@@ -207,5 +210,6 @@ vehicleAddition2 =
 	"Chemlight_blue",
 	"Chemlight_green",
 	"Chemlight_yellow",
-	"Chemlight_red"
+	"Chemlight_red",
+	"NVGoggles"
 ];
