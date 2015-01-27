@@ -50,6 +50,15 @@ _text = format ["Stop engine in 10s or try with engine off, to change ownership.
 
 uiSleep 10;
 
+// Ensure the player has enough money
+if (_price > _playerMoney) exitWith
+{
+	_text = format ["You need $%2 to change ownership on %1", _vehClass, _price];
+	[_text, 5] call mf_notify_client;
+	playSound "FD_CP_Not_Clear_F";
+	mutexScriptInProgress = false;
+};
+
 if (isEngineOn _vehicle) exitWith
 {
 	["Engine still running. Deal CANCELLED!", 5] call mf_notify_client;
@@ -79,15 +88,6 @@ if (!isNil "_price") then
 	// Display confirm message
 	if ([parseText _confirmMsg, "Confirm", "OK", true] call BIS_fnc_guiMessage) then
 	{	
-		// Ensure the player has enough money
-		if (_price > _playerMoney) exitWith
-		{
-			_text = format ["You need $%2 to change ownership on %1", _vehClass, _price];
-			[_text, 5] call mf_notify_client;
-			playSound "FD_CP_Not_Clear_F";
-			mutexScriptInProgress = false;
-		};
-
 		// get everyone out of the vehicle
 		_vehicleCrewArr = crew _vehicle;
 		{
