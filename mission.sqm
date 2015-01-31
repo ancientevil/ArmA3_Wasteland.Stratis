@@ -14623,7 +14623,7 @@ class Mission
 		{
 			position[]={13073.604,0.00047590095,7886.981};
 			azimut=-253.51601;
-			offsetY=5.5;
+			offsetY=5.3;
 			id=1354;
 			side="EMPTY";
 			vehicle="Land_BagFence_Round_F";
@@ -14634,7 +14634,7 @@ class Mission
 		{
 			position[]={13073.47,0.0014275999,7885.2603};
 			azimut=-115.925;
-			offsetY=5.5;
+			offsetY=5.3;
 			id=1355;
 			side="EMPTY";
 			vehicle="Land_BagFence_Long_F";
@@ -14657,7 +14657,7 @@ class Mission
 		{
 			position[]={13080.339,0.002141587,7873.1167};
 			azimut=-343.918;
-			offsetY=5.5;
+			offsetY=5.3;
 			id=1357;
 			side="EMPTY";
 			vehicle="Land_BagFence_Round_F";
@@ -14668,7 +14668,7 @@ class Mission
 		{
 			position[]={13078.933,0.0023896641,7873.9009};
 			azimut=-115.925;
-			offsetY=5.5;
+			offsetY=5.3;
 			id=1358;
 			side="EMPTY";
 			vehicle="Land_BagFence_Long_F";
@@ -20160,7 +20160,7 @@ class Mission
 		};
 		class Item235
 		{
-			position[]={13082.748,-0.00023939559,7815.5889};
+			position[]={13093.568,0,7819.8809};
 			name="VehStore6_seaSpawn";
 			type="Empty";
 			colorName="ColorBlack";
