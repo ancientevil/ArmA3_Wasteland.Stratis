@@ -2172,7 +2172,7 @@ class Mission
 				{
 					position[]={13149.613,0.0027527043,7906.5376};
 					azimut=-158.99333;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					special="NONE";
 					id=162;
 					side="LOGIC";
@@ -2194,7 +2194,7 @@ class Mission
 				{
 					position[]={13159.35,-0.00017795665,7894.8057};
 					azimut=-385.99329;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					id=163;
 					side="LOGIC";
 					vehicle="C_man_polo_1_F_afro";
@@ -2215,7 +2215,7 @@ class Mission
 				{
 					position[]={13151.896,0.00041044678,7892.0718};
 					azimut=-341.99332;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					special="NONE";
 					id=164;
 					side="LOGIC";
@@ -13721,7 +13721,7 @@ class Mission
 		{
 			position[]={13152.632,0.0036467561,7909.8125};
 			azimut=-25.993351;
-			offsetY=5.9000001;
+			offsetY=5.9;
 			id=1277;
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
