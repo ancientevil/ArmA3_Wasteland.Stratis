@@ -20128,7 +20128,7 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={13054.872,2.4291699,7817.3418};
+			position[]={13035.3,0.00163388,7836.6};
 			name="VehStore6_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
@@ -20144,7 +20144,7 @@ class Mission
 		};
 		class Item233
 		{
-			position[]={12985.309,8.9895363,7853.5337};
+			position[]={13009.8,0.00169802,7853.2};
 			name="VehStore6_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
