@@ -15,14 +15,14 @@ _owner = _data select 2;
 _preload = [_this, 1, false, [false]] call BIS_fnc_param;
 _height = (["A3W_spawnBeaconSpawnHeight", 0] call getPublicVar) max 0;
 _water = surfaceIsWater position _beacon;
-_beaconwaterheight = [(getPosASL _beacon select 0) + 2, (getPosASL _beacon select 1) + 2, (getPosASL _beacon select 2) - 1];
+_beaconwaterheight = [(getPosASL _beacon select 0) + 2, (getPosASL _beacon select 1) + 2.5, (getPosASL _beacon select 2) - 1];
 
 _beacon setVariable ["spawnBeacon_lastUse", diag_tickTime];
 
 if (_height < 25 && !_water) then
 {
 	_pos set [2, 0];
-	_playerPos = [_pos,1,25,1,0,0,1] call findSafePos;
+	_playerPos = [_pos,1,25,1,0,0,0] call findSafePos;
 }
 else
 {
