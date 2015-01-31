@@ -10,7 +10,6 @@
 diag_log format["Loading NLU base script functions..."];
 
 LCK_frontdoorarray = ["frontdoor1","frontdoor2","frontdoor3","frontdoor4"];
-LCK_backdoorarray = ["backdoor1","backdoor2","backdoor3","backdoor4"];
 LCK_shopdoorarray = ["shopdoor1","shopdoor2","shopdoor3"];
 LCK_hangar1 = ["h1door1","h1door2","h1door3","h1door4","h1door5","h1door6"];
 LCK_hangar2 = ["h2door1","h2door2","h2door3","h2door4","h2door5","h2door6"];
@@ -50,36 +49,6 @@ LCK_Frontlock = {
 	} forEach LCK_frontdoorarray;
 
 	hint format["The base is locked"];
-};
-
-LCK_Backunlock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_backdoorarray;
-
-	hint format["The plane doors are unlocked"];
-};
-
-LCK_Backlock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_backdoorarray;
-
-	hint format["The plane doors are locked"];
 };
 
 LCK_Shopunlock = {
@@ -392,13 +361,6 @@ showLockUnlockFrontAction = {
 	(true)
 };
 
-showLockUnlockBackAction = {
-	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_HBarrierWall_corridor_F"], 5]);
-	if (not([_objects, LCK_backdoorarray] call arrays_intersect)) exitWith {false};
-	(true)
-};
-
 showLockUnlockShopAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
@@ -467,9 +429,6 @@ LCK_Actions = {
 	_unit = _this select 0;
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock frontdoor", LCK_Frontunlock, "", 1, false, false, "","(call showLockUnlockFrontAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock frontdoor", LCK_Frontlock, "", 1, false, false, "","(call showLockUnlockFrontAction)"];
-	
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock backdoor", LCK_Backunlock, "", 1, false, false, "","(call showLockUnlockBackAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock backdoor", LCK_Backlock, "", 1, false, false, "","(call showLockUnlockBackAction)"];
 	
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock shop", LCK_Shopunlock, "", 1, false, false, "","(call showLockUnlockShopAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock shop", LCK_Shoplock, "", 1, false, false, "","(call showLockUnlockShopAction)"];

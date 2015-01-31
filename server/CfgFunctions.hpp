@@ -10,6 +10,7 @@ class ServerDir
 	class setupOwnerTruck {file = "server\functions\setupOwnerTruck.sqf";};
 	class setupSellTruck {file = "server\functions\setupSellTruck.sqf";};
 	class setupStoreNPC {file = "server\functions\setupStoreNPC.sqf";};
+	class setupAdminStoreNPC {file = "server\functions\setupAdminStoreNPC.sqf";};
 	class setupMissionObject {file = "server\functions\setupMissionObject.sqf";};
 	class setupMissionATM {file = "server\functions\setupMissionATM.sqf";};
 };
