@@ -3,7 +3,7 @@ sleep 90;
 private ["_messages", "_timeout"];
 
 _messages = [
-	["NLU", "NL United Tank'n'Spank Wasteland"],
+	["NLU", "NL United A3Wasteland"],
 	["Welcome", (name player)],
 	["A3Wasteland", worldName],
 	["Teamspeak", "ts.nl-united.nl"],
