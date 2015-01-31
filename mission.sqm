@@ -20128,7 +20128,7 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={13035.3,0.00163388,7836.6};
+			position[]={13048.956,2.5490794,7825.9731};
 			name="VehStore6_heliSpawn";
 			type="Empty";
 			colorName="ColorBlack";
@@ -20136,7 +20136,7 @@ class Mission
 		};
 		class Item232
 		{
-			position[]={13046.708,2.6631236,7828.2456};
+			position[]={13041.318,2.984585,7832.9111};
 			name="GunStore5_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
@@ -20152,7 +20152,7 @@ class Mission
 		};
 		class Item234
 		{
-			position[]={13043.254,2.8401403,7830.9087};
+			position[]={13037.864,3.2631433,7835.5742};
 			name="GenStore6_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
@@ -20160,7 +20160,7 @@ class Mission
 		};
 		class Item235
 		{
-			position[]={13093.568,0,7819.8809};
+			position[]={13090.5,0,7820.98};
 			name="VehStore6_seaSpawn";
 			type="Empty";
 			colorName="ColorBlack";
