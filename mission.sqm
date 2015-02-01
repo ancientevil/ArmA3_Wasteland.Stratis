@@ -2172,7 +2172,7 @@ class Mission
 				{
 					position[]={10219.24,0,22750.773};
 					azimut=-261.23566;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					special="NONE";
 					id=162;
 					side="LOGIC";
@@ -2194,7 +2194,7 @@ class Mission
 				{
 					position[]={10228.645,0,22762.789};
 					azimut=-488.23563;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					id=163;
 					side="LOGIC";
 					vehicle="C_man_polo_1_F_afro";
@@ -2215,7 +2215,7 @@ class Mission
 				{
 					position[]={10232.895,0,22756.068};
 					azimut=-444.23566;
-					offsetY=5.9899998;
+					offsetY=5.9;
 					special="NONE";
 					id=164;
 					side="LOGIC";
