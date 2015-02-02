@@ -210,6 +210,5 @@ vehicleAddition2 =
 	"Chemlight_blue",
 	"Chemlight_green",
 	"Chemlight_yellow",
-	"Chemlight_red",
-	"NVGoggles"
+	"Chemlight_red"
 ];
