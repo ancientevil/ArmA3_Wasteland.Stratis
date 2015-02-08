@@ -78,5 +78,6 @@ if (isServer) then
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
 [] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+[] execVM "addons\statusBar\statusBar.sqf";   			// shows FPS and teamspeak details
 
 [] execVM "addons\scripts\intro.sqf";					// Welcome intro
