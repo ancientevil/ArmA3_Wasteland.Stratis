@@ -61,6 +61,8 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\cctv\laptop_flat_menu.hpp"
 #include "addons\cctv\cctv_menu.hpp"
 
+#include "addons\taw_vd\dialog.hpp"
+
 class RscTitles
 {
 	#include "addons\proving_ground\PG_rsctitles.hpp"
@@ -72,6 +74,7 @@ class RscTitles
 
 class CfgFunctions
 {
+	#include "addons\taw_vd\CfgFunctions.hpp"
 	class A3W
 	{
 		#include "server\CfgFunctions.hpp"
