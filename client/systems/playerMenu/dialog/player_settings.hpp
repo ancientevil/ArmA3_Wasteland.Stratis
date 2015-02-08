@@ -88,7 +88,7 @@ class playerSettings {
 			x = 0.06; y = 0.313;
 			w = 0.3; h = 0.05;
 		};
-
+		
 /*		class distanceText : w_RscText {
 			idc = view_range_text;
 			text = "View range:";
@@ -159,6 +159,15 @@ class playerSettings {
 			x = 0.158; y = 0.66;
 			w = 0.225; h = 0.033 * safezoneH;
 		};
+		
+		class btnDistanceNear : w_RscButton {
+			idc = -1;
+			text = "Set View";
+			onButtonClick = "[] execVM 'addons\taw_vd\fn_openTAWVD.sqf'";
+			x = 0.02; y = 0.43;
+			w = 0.125; h = 0.033 * safezoneH;
+		};
+		
 /*
 		class btnDistanceNear : w_RscButton {
 			idc = -1;
