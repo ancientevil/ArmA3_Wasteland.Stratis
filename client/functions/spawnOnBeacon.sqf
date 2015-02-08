@@ -15,7 +15,7 @@ _owner = _data select 2;
 _preload = [_this, 1, false, [false]] call BIS_fnc_param;
 _height = (["A3W_spawnBeaconSpawnHeight", 0] call getPublicVar) max 0;
 _water = surfaceIsWater position _beacon;
-_beaconwaterheight = [(getPosASL _beacon select 0) + 3, (getPosASL _beacon select 1) + 3 , (getPosASL _beacon select 2) - 1.2];
+_beaconwaterheight = [(getPosASL _beacon select 0) + 3, (getPosASL _beacon select 1) + 3 , (getPosASL _beacon select 2) + 500];
 
 _beacon setVariable ["spawnBeacon_lastUse", diag_tickTime];
 
