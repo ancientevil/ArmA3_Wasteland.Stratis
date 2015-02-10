@@ -236,10 +236,10 @@ accessoriesArray = compileFinal str
 	["DMS", "optic_DMS", 175, "item"],
 	["LRPS", "optic_LRPS", 175, "item"],
 	["SOS", "optic_SOS", 200, "item"],
-	["NVS", "optic_NVS", 500, "item"],
-	["TWS", "optic_tws", 5000, "item"],
-	["TWS MG", "optic_tws_mg", 6000, "item"],
-	["Nightstalker", "optic_Nightstalker", 7500, "item"]
+	["NVS", "optic_NVS", 1500, "item"],
+	["TWS", "optic_tws", 7500, "item"],
+	["TWS MG", "optic_tws_mg", 8500, "item"],
+	["Nightstalker", "optic_Nightstalker", 10000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -506,7 +506,7 @@ genItemArray = compileFinal str
 	["Medikit", "Medikit", 150, "item"],
 	["Toolkit", "ToolKit", 150, "item"],
 	["Mine Detector", "MineDetector", 100, "item"],
-	["NV Goggles", "NVGoggles", 100, "nvg"],
+	["NV Goggles", "NVGoggles", 500, "nvg"],
 	["Diving Goggles", "G_Diving", 100, "gogg"],
 	["Binoculars", "Binocular", 50, "binoc"],
 	["Rangefinder", "Rangefinder", 150, "binoc"],
