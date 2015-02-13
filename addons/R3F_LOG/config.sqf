@@ -41,7 +41,7 @@
  * Si true :  tous les objets sont inactifs par défaut
  *            Vous pouvez activer quelques objets avec : objet setVariable ["R3F_LOG_disabled", false];
  */
-R3F_LOG_CFG_disabled_by_default = false;
+R3F_LOG_CFG_disabled_by_default = true;
 
 /**
  * LOCK THE LOGISTICS FEATURES TO SIDE, FACTION OR PLAYER
@@ -246,7 +246,12 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 	"Truck_02_base_F",
 	"Truck_03_base_F",
 	"Wheeled_APC_F",
-	"Tank_F",
+	"APC_Tracked_01_base_F",
+	"APC_Tracked_02_base_F",
+	"APC_Tracked_03_base_F",
+	"MBT_01_base_F",
+	"MBT_02_base_F",
+	"MBT_03_base_F",
 	"Boat_Armed_01_base_F"
 ];
 
