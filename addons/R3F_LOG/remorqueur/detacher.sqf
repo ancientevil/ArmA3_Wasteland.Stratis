@@ -28,21 +28,47 @@ else
 	{
 		[_objet, player] call R3F_LOG_FNCT_definir_proprietaire_verrou;
 		
-		_remorqueur setVariable ["R3F_LOG_remorque", objNull, true];
-		_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
-		
-		// Le léger setVelocity vers le haut sert à defreezer les objets qui pourraient flotter.
-		[_objet, "detachSetVelocity", [0, 0, 0.1]] call R3F_LOG_FNCT_exec_commande_MP;
-		
-		player playMove format ["AinvPknlMstpSlay%1Dnon_medic", switch (currentWeapon player) do
+		player switchMove "AinvPknlMstpSlayWrflDnon_medic";
+
+		_towerBB = _remorqueur call fn_boundingBoxReal;
+		_towerMinBB = _towerBB select 0;
+		_towerMaxBB = _towerBB select 1;
+
+		if ((getPosASL player) select 2 > 0) then
 		{
-			case "": {"Wnon"};
-			case primaryWeapon player: {"Wrfl"};
-			case secondaryWeapon player: {"Wlnr"};
-			case handgunWeapon player: {"Wpst"};
-			default {"Wrfl"};
-		}];
-		sleep 7;
+			player attachTo [_remorqueur,
+			[
+				(_towerMinBB select 0) - 0.25,
+				(_towerMinBB select 1) - 0.25,
+				_towerMinBB select 2
+			]];
+
+			player setDir 90;
+			player setPos (getPos player);
+			sleep 0.05;
+			detach player;
+		};
+
+		sleep 2;
+
+		// On mémorise sur le réseau que le véhicule remorque quelque chose
+		_remorqueur setVariable ["R3F_LOG_remorque", objNull, true];
+		// On mémorise aussi sur le réseau que le objet est attaché en remorque
+		_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
+
+		if (local _objet) then
+		{
+			[_objet] call detachTowedObject;
+		}
+		else
+		{
+			pvar_detachTowedObject = [netId _objet];
+			publicVariable "pvar_detachTowedObject";
+		};
+
+		sleep 4;
+
+		player switchMove "";
 		
 		if (alive player) then
 		{

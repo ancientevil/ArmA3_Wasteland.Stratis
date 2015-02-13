@@ -53,30 +53,6 @@ else
 						#define _JAUGE_H 0.025
 						
 						disableSerialization;
-						/*
-						// Création du titre du compte-à-rebours dans le display du jeu
-						_ctrl_titre = (findDisplay 46) ctrlCreate ["RscText", -1];
-						_ctrl_titre ctrlSetPosition [0.5 - 0.5*_JAUGE_W, _JAUGE_Y - 1.5*_JAUGE_H, _JAUGE_W, 1.5*_JAUGE_H];
-						_ctrl_titre ctrlSetFontHeight 1.5*_JAUGE_H;
-						_ctrl_titre ctrlSetText format [STR_R3F_LOG_action_heliport_attente, _duree];
-						_ctrl_titre ctrlCommit 0;
-						
-						// Création de l'arrière-plan de la jauge dans le display du jeu
-						_ctrl_fond = (findDisplay 46) ctrlCreate ["RscText", -1];
-						_ctrl_fond ctrlSetBackgroundColor [0, 0, 0, 0.4];
-						_ctrl_fond ctrlSetPosition [0.5 - 0.5*_JAUGE_W, _JAUGE_Y, _JAUGE_W, _JAUGE_H];
-						_ctrl_fond ctrlCommit 0;
-						
-						// Création d'une jauge à 0% dans le display du jeu
-						_ctrl_jauge = (findDisplay 46) ctrlCreate ["RscText", -1];
-						_ctrl_jauge ctrlSetBackgroundColor [0, 0.6, 0, 1];
-						_ctrl_jauge ctrlSetPosition [0.5 - 0.5*_JAUGE_W, _JAUGE_Y, 0, _JAUGE_H];
-						_ctrl_jauge ctrlCommit 0;
-						
-						// La jauge passe progressivement de 0% à 100%
-						_ctrl_jauge ctrlSetPosition [0.5 - 0.5*_JAUGE_W, _JAUGE_Y, _JAUGE_W, _JAUGE_H];
-						_ctrl_jauge ctrlCommit _duree;
-						*/
 						
 						_time_debut = time;
 						_attente_valide = true;
@@ -114,26 +90,33 @@ else
 						// On effecture l'héliportage
 						if (_attente_valide) then
 						{
-							//ctrlDelete _ctrl_titre;
-							//ctrlDelete _ctrl_fond;
-							//ctrlDelete _ctrl_jauge;
-							
 							_heliporteur setVariable ["R3F_LOG_heliporte", _objet, true];
 							_objet setVariable ["R3F_LOG_est_transporte_par", _heliporteur, true];
 							
+							_heliBB = _heliporteur call fn_boundingBoxReal;
+							_heliMinBB = _heliBB select 0;
+							_heliMaxBB = _heliBB select 1;
+
+							_objectBB = _objet call fn_boundingBoxReal;
+							_objectMinBB = _objectBB select 0;
+							_objectMaxBB = _objectBB select 1;
+
+							_objectCenterX = (_objectMinBB select 0) + (((_objectMaxBB select 0) - (_objectMinBB select 0)) / 2);
+							_objectCenterY = (_objectMinBB select 1) + (((_objectMaxBB select 1) - (_objectMinBB select 1)) / 2);
+
+							_heliPos = _heliporteur modelToWorld [0,0,0];
+							_objectPos = _objet modelToWorld [0,0,0];
+
+							_minZ = (_heliMinBB select 2) - (_objectMaxBB select 2) - 0.5;
+
 							// Attacher sous l'héliporteur au ras du sol
-							_objet attachTo [_heliporteur, [
-								0,
-								0,
-								(boundingBoxReal _heliporteur select 0 select 2) - (boundingBoxReal _objet select 0 select 2) - (getPos _heliporteur select 2) + 0.5
+							[_objet, true] call fn_enableSimulationGlobal;
+							_objet attachTo [_heliporteur,
+							[
+								0 - _objectCenterX,
+								0 - _objectCenterY,
+								((_objectPos select 2) - (_heliPos select 2) + 2) min _minZ
 							]];
-							
-							// Ré-aligner dans le sens de la longueur si besoin
-							if (((boundingBoxReal _objet select 1 select 0) - (boundingBoxReal _objet select 0 select 0)) >
-								((boundingBoxReal _objet select 1 select 1) - (boundingBoxReal _objet select 0 select 1))) then
-							{
-								[_objet, "setDir", 90] call R3F_LOG_FNCT_exec_commande_MP;
-							};
 							
 							systemChat format [STR_R3F_LOG_action_heliporter_fait, getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
 							
@@ -174,40 +157,12 @@ else
 						else
 						{
 							systemChat STR_R3F_LOG_action_heliport_echec_attente;
-							/*
-							// La jauge s'arrête
-							_ctrl_jauge ctrlSetPosition ctrlPosition _ctrl_jauge;
-							
-							// La jauge clignote rouge
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 1];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 0];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 1];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 0];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 1];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 0];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							_ctrl_jauge ctrlSetBackgroundColor [1, 0, 0, 1];
-							_ctrl_jauge ctrlCommit 0; sleep 0.175;
-							
-							ctrlDelete _ctrl_titre;
-							ctrlDelete _ctrl_fond;
-							ctrlDelete _ctrl_jauge;*/
 						};
 					}
 					else
 					{
 						systemChat format [STR_R3F_LOG_objet_remorque_en_cours, getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
 					};
-				//}
-				//else
-				//{
-				//	systemChat format [STR_R3F_LOG_joueur_dans_objet, getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-				//};
 			}
 			else
 			{
