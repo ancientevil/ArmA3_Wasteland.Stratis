@@ -129,6 +129,7 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
+			_object setVariable ["R3F_LOG_Disabled", false, true];
 
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
@@ -173,11 +174,14 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				if (_object isKindOf "AllVehicles" && !(_object isKindOf "StaticWeapon")) then
 				{
 					_object setPosATL [_safePos select 0, _safePos select 1, 0.5];
-					_object setVelocity [0,0,0.01];
+					//_object setVelocity [0,0,0.01];
+					_object setVelocity [0,0,0.001]; // Changed vertical velocity to slower.
+					_object engineOn true; // Lets already turn the engine one to see if it fixes exploding vehicles.
 					// _object spawn cleanVehicleWreck;
 					_object setVariable ["A3W_purchasedVehicle", true, true];
+					_object lock 2; // Spawn vehicles in locked
+					_object setVariable ["R3F_LOG_disabled",true,true]; // Spawn vehicles in locked
 				};
-
 				if (_object isKindOf "Plane") then
 				{
 					_object setDir markerDir _marker;
