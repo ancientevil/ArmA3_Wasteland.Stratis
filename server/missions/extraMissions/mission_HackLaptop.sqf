@@ -70,6 +70,8 @@ _successExec =
 	RemoveLaptopHandler = _laptop;
 	publicVariable "RemoveLaptopHandler";
 	{ deleteVehicle _x } forEach [_bunker, _laptop];
+	
+	_obj setVariable ["R3F_LOG_disabled", false, true];
 
 	_successHintMessage = format ["The laptop is hacked and the smugglers are dead. The weapons and money are yours!"];
 };
