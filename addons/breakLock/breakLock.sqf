@@ -61,6 +61,7 @@ if (_break < _price / 4) exitWith {
 	_soundToPlay = _soundPath + "addons\breakLock\sounds\carlock.ogg";
 	playSound3D [_soundToPlay, _vehicle, false, getPosASL _vehicle, 1, 1, 15];
 	player action ["lightOn", _vehicle];
-	sleep 0.5;
-	player action ["lightOff", _vehicle];
+	_vehicle engineOn true;
+	//sleep 0.5;
+	//player action ["lightOff", _vehicle];
 	titleText ["You broke in to the vehicle!","PLAIN DOWN"]; titleFadeOut 2;
