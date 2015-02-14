@@ -277,6 +277,13 @@ R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
 	"Boat_Civil_01_base_F",
 	"Boat_Armed_01_base_F",
 	"Helicopter_Base_F",
+	"Wheeled_APC_F",
+	"APC_Tracked_01_base_F",
+	"APC_Tracked_02_base_F",
+	"APC_Tracked_03_base_F",
+	"MBT_01_base_F",
+	"MBT_02_base_F",
+	"MBT_03_base_F",
 	"Plane"
 ];
 
@@ -314,7 +321,13 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"SDV_01_base_F",
 	"Boat_Civil_01_base_F",
 	"Boat_Armed_01_base_F",
-	"Wheeled_APC_F"
+	"Wheeled_APC_F",
+	"APC_Tracked_01_base_F",
+	"APC_Tracked_02_base_F",
+	"APC_Tracked_03_base_F",
+	"MBT_01_base_F",
+	"MBT_02_base_F",
+	"MBT_03_base_F"
 ];
 
 
