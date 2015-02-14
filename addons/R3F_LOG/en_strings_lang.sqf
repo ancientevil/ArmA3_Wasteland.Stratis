@@ -11,6 +11,7 @@
 STR_R3F_LOG_action_heliporter = "Lift the object";
 STR_R3F_LOG_action_heliporter_fait = "Object ""%1"" attached.";
 STR_R3F_LOG_action_heliport_larguer = "Drop the object";
+STR_R3F_LOG_action_heliport_parachute = "Paradrop the object";
 STR_R3F_LOG_action_heliport_larguer_fait = "Object ""%1"" dropped.";
 STR_R3F_LOG_action_heliport_attente = "Hooking... (%1)";
 STR_R3F_LOG_action_heliport_echec_attente = "Lift aborted ! Stay hover during the hooking.";
