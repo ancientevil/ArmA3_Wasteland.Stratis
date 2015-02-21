@@ -123,6 +123,9 @@ _exclVehicleIDs = [];
 		if (!isNil {_veh getVariable "ownerUID"}) then {
 			_veh lock 2;
 			_veh setVariable ["R3F_LOG_disabled",true,true];
+		} else {
+			_veh lock 1;
+			_veh setVariable ["R3F_LOG_disabled",false,true];		
 		};
 
 		clearWeaponCargoGlobal _veh;
