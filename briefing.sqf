@@ -261,15 +261,15 @@ player createDiaryRecord ["changelog",
  [
 "NL United",
 "
-<br/> [Info] Vehicle saving is 2*24 hours if unused
-<br/> [Info] Object saving is 7*24 hours
+<br/> [Added] Ability to change uniform texture
+<br/> [Added] Custom view distance ability
 <br/> [Added] Show R.I.P. map marker on corpse location after death
 <br/> [Added] Multiplying money reward for players that stay on the server
 <br/> [Added] Changed the appearance of the store NPCs
-<br/> [Added] Add Holland! vehicle skin (holland.jpg)
+<br/> [Added] Added several new vehicle textures
 <br/> [Added] Sell and Change Ownership trucks
 <br/> [Added] Vehicle locking and info script by Micovery
-<br/> [Added] Locked vehicle break in at a cost
+<br/> [Added] Locked vehicle hotwire in at a cost
 <br/> [Added] Heal self script
 <br/> [Added] Access to DLC Helicopter pilot seat without DLC
 <br/> [Added] Patrol mission: Airport patrol
@@ -282,10 +282,12 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Resupply truck
 <br/> [Added] Donator bases with donator lock state
 <br/> [Added] UAV for player only unlock by BadVolt and Micovery
+<br/> [Added] Mortar to one mission as reward
+<br/> [Removed] Mortar from store
+<br/> [Changed] Raise some prices
+<br/> [Changed] Vehicles spawn in locked and with engine on
 <br/> [Changed] Spawnbeacon insertion to 0 mtrs
 <br/> [Changed] Old R3F script to 3.1
-<br/> [Server] Lobby idle kick after 15 minutes
-<br/> [Server] Max ping is 250
 "
 ]];
 
