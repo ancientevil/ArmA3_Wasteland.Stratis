@@ -19894,7 +19894,7 @@ class Mission
 		{
 			position[]={21927.463,17.190084,20962.229};
 			name="base1";
-			text="[ICI] BASE";
+			text="Iraklia Hotel";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
@@ -19914,7 +19914,7 @@ class Mission
 		{
 			position[]={9251.2871,108.15617,11475.918};
 			name="base2";
-			text="[SOE] BASE";
+			text="Riga Citadel";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
@@ -19934,7 +19934,7 @@ class Mission
 		{
 			position[]={10813.464,146.57408,17568.117};
 			name="base3";
-			text="[FIRE] BASE";
+			text="Orino Fortress";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
@@ -19955,10 +19955,10 @@ class Mission
 		{
 			position[]={22147.391,3.253191,14472.621};
 			name="base4";
-			text="[TIL] BASE";
+			text="Thelos Stronghold";
 			type="mil_dot";
 			colorName="ColorGUER";
-			angle=-3.8909242;
+			angle=-3.8909199;
 		};
 		class Item211
 		{
@@ -19976,7 +19976,7 @@ class Mission
 		{
 			position[]={16881.191,11.020727,21787.711};
 			name="base5";
-			text="[INF] BASE";
+			text="Frini Outpost";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
@@ -19996,7 +19996,7 @@ class Mission
 		{
 			position[]={25340.373,0.0064687692,18798.807};
 			name="base6";
-			text="[TII] BASE";
+			text="Almyra Overlook";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
@@ -20188,10 +20188,10 @@ class Mission
 		{
 			position[]={10164.021,0,22697.613};
 			name="basenlu";
-			text="[NLU] BASE";
+			text="Ammolofi Madhouse";
 			type="mil_dot";
 			colorName="ColorGUER";
-			angle=-102.24231;
+			angle=-102.242;
 		};
 	};
 	class Sensors
