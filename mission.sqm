@@ -18354,7 +18354,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=238;
+		items=239;
 		class Item0
 		{
 			position[]={3612.1487,12.11851,13020.892};
@@ -20192,6 +20192,15 @@ class Mission
 			type="mil_dot";
 			colorName="ColorGUER";
 			angle=-102.242;
+		};
+		class Item238
+		{
+			position[]={12028.705,-0.0044658319,24524.625};
+			name="rules";
+			text="RULES: Click Server Rules on the left";
+			type="mil_box";
+			colorName="ColorWEST";
+			angle=-270;
 		};
 	};
 	class Sensors
