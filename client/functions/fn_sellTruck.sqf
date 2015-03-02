@@ -65,7 +65,7 @@ if (!local _vehicle) then
 
 if (_vehicle distance _truck > SELL_TRUCK_DISTANCE || vehicle _unit != _vehicle) then
 {
-	["Vehicle resupply aborted", 5] call mf_notify_client;
+	["Vehicle selling aborted", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
 
