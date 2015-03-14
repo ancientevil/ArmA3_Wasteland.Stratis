@@ -25,14 +25,7 @@ if ((_unit != driver _vehicle) && !(_vehicle isKindOf "StaticWeapon") && !(_vehi
 	["You must be in the driver seat to sell a vehicle.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
-/*
-//check if caller is not in vehicle
-if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
-{
-	["You must be in the driver seat to sell a vehicle.", 5] call mf_notify_client;
-	mutexScriptInProgress = false;
-};
-*/
+
 //set up prices
 _vehClass = typeOf _vehicle;
 _price = 100; // price = 100 for vehicles not found in vehicle store.

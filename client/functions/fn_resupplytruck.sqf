@@ -21,22 +21,21 @@ _truck = _this select 0;
 _unit = _this select 1;
 _vehicle = vehicle _unit;
 
-
 //check if caller is the driver
-if ((_unit != driver _vehicle) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
+if ((_unit != driver _vehicle) && !(_vehicle isKindOf "StaticWeapon")) exitWith
+{
+	["You must be in the driver seat to resupply the vehicle.\n UAV/UGV cannot be resupplied. Use an ammotruck instead.", 5] call mf_notify_client;
+	mutexScriptInProgress = false;
+};
+
+
+//check if caller is not in vehicle
+if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon")) exitWith
 {
 	["You must be in the driver seat to resupply the vehicle.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
 
-/*
-//check if caller is in vehicle
-if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
-{
-	["You must be in the driver seat to resupply the vehicle.", 5] call mf_notify_client;
-	mutexScriptInProgress = false;
-};
-*/
 //set up prices
 	_vehClass = typeOf _vehicle;
 	_price = 3000; // price = 1000 for vehicles not found in vehicle store. (e.g. Static Weapons)	
@@ -48,7 +47,7 @@ if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isK
 	};
 } forEach (call allVehStoreVehicles);
 
-_text = format ["Stop engine in 10s to start resupply. Cost for service is $%1 for this vehicle. This will take some time.\nYou can always abort by getting out of the vehicle.", _price];
+_text = format ["Stop engine in 10s to start resupply. Cost for service is $%1 for this vehicle. This will take some time.\nYou can always abort by getting out of the vehicle.\n UAV/UGV cannot be resupplied. Use an ammotruck instead.", _price];
 			titleText [_text, "PLAIN DOWN", 0.5];
 sleep 10;
 _eng = isEngineOn _vehicle;
@@ -56,7 +55,7 @@ if (_eng) exitWith {
 	titleText ["Engine still running. Service CANCELED!", "PLAIN DOWN", 0.5];
 	mutexScriptInProgress = false;
 };
-	
+/*
 if ((!isnull (gunner _vehicle)) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) then {
 	_vehicle vehicleChat format ["Gunner must be out of seat for service! Get gunner out in 20s."];
 	sleep 10;
@@ -68,7 +67,7 @@ if ((!isnull (gunner _vehicle)) && !(_vehicle isKindOf "StaticWeapon") && !(_veh
 		mutexScriptInProgress = false;
 	};
 };
-
+*/
 _resupplyThread = _vehicle spawn
 {
 	_vehicle = _this;
