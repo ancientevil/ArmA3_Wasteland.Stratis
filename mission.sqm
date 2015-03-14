@@ -2232,7 +2232,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1538;
+		items=1542;
 		class Item0
 		{
 			position[]={5892.3325,225.05762,20124.521};
@@ -18424,6 +18424,50 @@ class Mission
 			text="Resupply_Truck_6";
 			init="this call A3W_fnc_setupResupplyTruck";
 			description="Resupply";
+		};
+		class Item1538
+		{
+			position[]={10834.67,142.02509,17577.176};
+			azimut=-270.12708;
+			offsetY=3;
+			id=1703;
+			side="EMPTY";
+			vehicle="Land_Canal_Wall_10m_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,+0.1];";
+		};
+		class Item1539
+		{
+			position[]={10834.671,142.82498,17568.932};
+			azimut=-270.12708;
+			offsetY=3;
+			id=1704;
+			side="EMPTY";
+			vehicle="Land_Canal_Wall_10m_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,+0.1];";
+		};
+		class Item1540
+		{
+			position[]={10834.672,143.42162,17561.521};
+			azimut=-270.12708;
+			offsetY=3;
+			id=1705;
+			side="EMPTY";
+			vehicle="Land_Canal_Wall_10m_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,+0.1];";
+		};
+		class Item1541
+		{
+			position[]={10832.887,144.22157,17556.986};
+			azimut=-270.12708;
+			offsetY=3;
+			id=1706;
+			side="EMPTY";
+			vehicle="Land_Canal_Wall_10m_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,+0.1];";
 		};
 	};
 	class Markers
