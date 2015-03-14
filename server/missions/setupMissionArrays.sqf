@@ -43,7 +43,7 @@ ExtraMissions =
 	["mission_Sniper", 1],
 	["mission_Smugglers", 1],
 	["mission_HostileJet", 0.5],
-	["mission_HackLaptop", 1]
+	["mission_HackLaptop", 0.5]
 ];
 
 PatrolMissions =

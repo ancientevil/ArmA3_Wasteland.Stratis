@@ -1,15 +1,12 @@
 /*
 =======================================================================================================================
-
 	downloadData - script to download data from a laptop and because of this complete a task (as example)
-
 	File:		downloadData.sqf
 	Author:		T-800a
-
 =======================================================================================================================
 */
 
-_filesizeamountrandomizer = [123804,165072,206340];
+_filesizeamountrandomizer = [165072,206340,251350];
 _filesize = _filesizeamountrandomizer call BIS_fnc_SelectRandom;
 
 T8_varFileSize = _filesize;  								// Filesize ... smaller files will take shorter time to download!
@@ -18,13 +15,12 @@ T8_varTLine01 = "Download cancelled!";				// download aborted
 T8_varTLine02 = "Download already in progress by someone else!";			// download already in progress by someone else
 T8_varTLine03 = "Download started!";					// download started
 T8_varTLine04 = "Download finished! The money is added to your inventory!";				// download finished
-T8_varTLine05 = "##  Download Bank Account Data  ##";				// line for the addaction
+T8_varTLine05 = "##  Hack Player Bank Accounts  ##";				// line for the addaction
 
 T8_varDiagAbort = false;
 T8_varDownSucce = false;
 
 downloadActionId = nil;
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,10 +62,11 @@ T8_fnc_abortActionLaptop =
 
 T8_fnc_ActionLaptop =
 {
-	private [ "_laptop", "_caller", "_id", "_cIU" ];
+	private [ "_laptop", "_caller", "_id", "_cIU","_totalMoney","_fivePercent","_playerSide"];
 	_laptop = _this select 0;
 	_caller = _this select 1;
 	_id = _this select 2;
+	
 	
 	
 	_cIU = _laptop getVariable [ "InUse", false ];
@@ -110,20 +107,83 @@ T8_fnc_ActionLaptop =
 				_newFile = T8_varFileSize;
 				ctrlSetText [ 8001, "Download finished!" ];	
 				T8_varDiagAbort = true;
-				player sideChat T8_varTLine04;
 				T8_varDownSucce = true;
 				
 				_laptop setVariable [ "Done", true, true ];
 				
-				_cashamountrandomizer = [10000,15000,20000,25000];
-				_cashamount = _cashamountrandomizer call BIS_fnc_SelectRandom;
-				
-				player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + _cashamount, true];
-				
-				axeDiagLog = format ["%1 hacked laptop for %2 money", player, _cashamount];
-				publicVariableServer "axeDiagLog";
-			};
+	
+
+	
+	
+	// Give Reward to the hacker
+		_totalMoney = 0;
+		_playerSide = side player;
+		switch (_playerSide) do {
+		
+	case BLUFOR: 
+	{	
+		{    
+			if (isPlayer _x) then {
+			if  (side _x == BLUFOR) then {}
+			else {
+			_bmoney = _x getVariable ["bmoney",0];
+			if ( _bmoney > 0 ) then { //might as well check for zero's
+			_fivePercent = round(0.035*_bmoney);
+			_x setVariable [ "bmoney", (_bmoney - _fivePercent), true ];
+			[] spawn fn_savePlayerData;
+			_totalMoney = _totalMoney + _fivePercent;
+		}
+			}
+				}
+		} forEach playableUnits;
+	}; 
+	
+	case OPFOR: 
+	{	
+		{    
+			if (isPlayer _x) then {
+			if  (side _x == OPFOR) then {}
+			else {
+			_bmoney = _x getVariable ["bmoney",0];
+			if ( _bmoney > 0 ) then { //might as well check for zero's
+			_fivePercent = round(0.035*_bmoney);
+			_x setVariable [ "bmoney", (_bmoney - _fivePercent), true ];
+			[] spawn fn_savePlayerData;
+			_totalMoney = _totalMoney + _fivePercent;
+		}
+			}
+				}	
+		} forEach playableUnits;
+	}; 		
+	default
+	{
+		{    
+			if (isPlayer _x) then {
+			_bmoney = _x getVariable ["bmoney",0];
+			if ( _bmoney > 0 ) then { //might as well check for zero's
+			_fivePercent = round(0.035*_bmoney);
+			_x setVariable [ "bmoney", (_bmoney - _fivePercent), true ];
+			[] spawn fn_savePlayerData;
+			_totalMoney = _totalMoney + _fivePercent;
+		}
+			}
+		} forEach playableUnits;
+	
+		   }; 
+							};
 			
+			if (_totalMoney > 25000) then {
+			player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + _totalMoney, true];
+			[] spawn fn_savePlayerData;
+			systemChat format["You have hacked players bank accounts to the value of $%1",_totalMoney];	
+			}
+		else 	{
+			player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + 25000, true];
+			[] spawn fn_savePlayerData;
+			systemChat format["You have hacked players bank accounts to the value of $25,000"];				
+				};
+			};
+					
 			ctrlSetText [ 8002, format [ "%1 kb/s", _dlRate ] ];		
 			ctrlSetText [ 8004, format [ "%1 kb", _newFile ] ];				
 			
