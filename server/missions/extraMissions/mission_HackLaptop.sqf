@@ -48,8 +48,10 @@ _setupObjects =
 
 	// NPC Randomizer 
 	_randomGroup = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
+	_randomGroup2 = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup,_missionPos] spawn _randomGroup;
+	[_aiGroup,_missionPos] spawn _randomGroup2;
 
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";	
