@@ -12519,7 +12519,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1003
 		{
@@ -12530,7 +12530,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1004
 		{
@@ -12541,7 +12541,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
 		};
 		class Item1005
 		{
@@ -12552,7 +12552,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
 		};
 		class Item1006
 		{
@@ -12563,7 +12563,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1007
 		{
@@ -12574,7 +12574,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1008
 		{
@@ -12585,7 +12585,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1009
 		{
@@ -13137,7 +13137,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1059
 		{
@@ -13148,7 +13148,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1060
 		{
@@ -13159,7 +13159,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
 		};
 		class Item1061
 		{
@@ -13170,7 +13170,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false; this setVariable [""R3F_LOG_Disabled"", false];";
 		};
 		class Item1062
 		{
@@ -13181,7 +13181,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1063
 		{
@@ -13192,7 +13192,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1064
 		{
@@ -13203,7 +13203,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1065
 		{
@@ -13214,7 +13214,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,+0.1];this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVectorUp [0,0,+0.1];this enableSimulation false;this allowDamage false;this setVariable [""R3F_LOG_disabled"", true];";
 		};
 		class Item1066
 		{
