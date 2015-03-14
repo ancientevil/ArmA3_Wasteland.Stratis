@@ -20,19 +20,19 @@ _unit = _this select 1;
 _vehicle = vehicle _unit;
 
 //check if caller is the driver
-if (_unit != driver _vehicle) exitWith
+if ((_unit != driver _vehicle) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
 {
 	["You must be in the driver seat to change ownership.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
-
+/*
 //check if caller is not in vehicle
-if (_vehicle == _unit) exitWith
+if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
 {
 	["You must be in the driver seat to change ownership.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
-
+*/
 //set up prices
 _vehClass = typeOf _vehicle;
 _playerMoney = player getVariable "cmoney";

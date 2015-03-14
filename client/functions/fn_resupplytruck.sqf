@@ -21,21 +21,22 @@ _truck = _this select 0;
 _unit = _this select 1;
 _vehicle = vehicle _unit;
 
-//check if caller is in vehicle
+
 //check if caller is the driver
-if (_unit != driver _vehicle) exitWith
+if ((_unit != driver _vehicle) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
 {
 	["You must be in the driver seat to resupply the vehicle.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
 
-//check if caller is not in vehicle
-if (_vehicle == _unit) exitWith
+/*
+//check if caller is in vehicle
+if ((_vehicle == _unit) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) exitWith
 {
 	["You must be in the driver seat to resupply the vehicle.", 5] call mf_notify_client;
 	mutexScriptInProgress = false;
 };
-
+*/
 //set up prices
 	_vehClass = typeOf _vehicle;
 	_price = 3000; // price = 1000 for vehicles not found in vehicle store. (e.g. Static Weapons)	
@@ -56,7 +57,7 @@ if (_eng) exitWith {
 	mutexScriptInProgress = false;
 };
 	
-if ((!isnull (gunner _vehicle)) && !(_vehicle isKindOf "StaticWeapon")) then {
+if ((!isnull (gunner _vehicle)) && !(_vehicle isKindOf "StaticWeapon") && !(_vehicle isKindOf "UAV_01_base_F") && !(_vehicle isKindOf "UAV_02_base_F") && !(_vehicle isKindOf "UGV_01_base_F")) then {
 	_vehicle vehicleChat format ["Gunner must be out of seat for service! Get gunner out in 20s."];
 	sleep 10;
 	_vehicle vehicleChat format ["Gunner must be out of seat for service! Get gunner out in 10s."];
