@@ -40,7 +40,7 @@ MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 1],
-	["mission_Hackers", 0.2]
+	["mission_Hackers", 0.25]
 ];
 
 PatrolMissions =
