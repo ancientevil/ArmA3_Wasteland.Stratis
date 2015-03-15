@@ -4,7 +4,7 @@
 //	@file Name: fn_sellTruck.sqf
 //	@file Author: Gigatek, Wiking, Lodac, Cael817, LouD
 
-#define CHANGEOWNER_VEHICLE_DISTANCE 20
+#define CHANGEOWNER_VEHICLE_DISTANCE 30
 #define CHANGEOWNER_PRICE_RELATIONSHIP 2
 
 // Check if mutex lock is active.
