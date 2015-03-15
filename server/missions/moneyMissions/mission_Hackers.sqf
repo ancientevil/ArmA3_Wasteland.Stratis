@@ -5,9 +5,9 @@
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
-#include "extraMissionDefines.sqf";
+#include "moneyMissionDefines.sqf";
 
-private ["_positions", "_bunker", "_laptop", "_obj", "_randomGroup", "_vehicleName","_table"];
+private ["_positions", "_camonet", "_laptop", "_obj", "_randomGroup", "_vehicleName","_table"];
 
 _setupVars =
 {
@@ -23,12 +23,12 @@ _setupObjects =
 	_baseToDelete = nearestObjects [_missionPos, ["All"], 25];
 	{ deleteVehicle _x } forEach _baseToDelete; 
 	
-	_bunker = createVehicle ["CamoNet_INDP_big_F", [_missionPos select 0, _missionPos select 1], [], 0, "CAN COLLIDE"];
-	_bunker allowdamage false;
-	_bunker setDir random 360;
-	_bunker setVariable ["R3F_LOG_disabled", false];
+	_camonet = createVehicle ["CamoNet_INDP_big_F", [_missionPos select 0, _missionPos select 1], [], 0, "CAN COLLIDE"];
+	_camonet allowdamage false;
+	_camonet setDir random 360;
+	_camonet setVariable ["R3F_LOG_disabled", false];
 
-	_missionPos = getPosASL _bunker;
+	_missionPos = getPosASL _camonet;
 
 	_table = createVehicle ["Land_WoodenTable_small_F", _missionPos, [], 0, "CAN COLLIDE"];
 	_table setPosASL [_missionPos select 0, (_missionPos select 1) - 0.25, _missionPos select 2];
@@ -57,7 +57,7 @@ _setupObjects =
 	_aiGroup setBehaviour "COMBAT";	
 	
 	_vehicleName = "Laptop";
-	_missionHintText = format ["<t color='%2'>Hackers</t> are using a laptop to hack your bank accounts. Hacking the laptop successfully will steal cash from each on-line players bank account! HURRY TO DEFEND YOUR BANK ACCOUNT OR HACK THEM!", _vehicleName, extraMissionColor];
+	_missionHintText = format ["<t color='%2'>Hackers</t> are using a laptop to hack your bank accounts. Hacking the laptop successfully will steal 2 percent from each on-line players bank account! HURRY TO DEFEND YOUR BANK ACCOUNT OR HACK OTHERS BANK ACCOUNTS!", _vehicleName, moneyMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -75,7 +75,7 @@ _failedExec =
 	// Mission failed
 	RemoveLaptopHandler = _laptop;
 	publicVariable "RemoveLaptopHandler";
-	{ deleteVehicle _x } forEach [_bunker, _obj, _laptop, _table];
+	{ deleteVehicle _x } forEach [_camonet, _obj, _laptop, _table];
 };
 
 _successExec =
@@ -83,9 +83,10 @@ _successExec =
 	// Mission completed
 	RemoveLaptopHandler = _laptop;
 	publicVariable "RemoveLaptopHandler";
-	{ deleteVehicle _x } forEach [_bunker, _laptop, _table];
+	{ deleteVehicle _x } forEach [_camonet, _laptop, _table];
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_obj];
 
 	_successHintMessage = format ["The laptop is hacked. Well done!"];
 };
 
-_this call extraMissionProcessor;
+_this call moneyMissionProcessor;

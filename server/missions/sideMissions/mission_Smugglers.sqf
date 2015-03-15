@@ -5,7 +5,7 @@
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
-#include "extraMissionDefines.sqf";
+#include "sideMissionDefines.sqf";
 
 private ["_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2"];
 
@@ -53,7 +53,7 @@ _setupObjects =
 	
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _smugglerVeh >> "picture");
 	
-	_missionHintText = format ["A group of weapon smugglers have been spotted. Stop the weapon deal and take their weapons and money.", extraMissionColor];
+	_missionHintText = format ["A group of weapon smugglers have been spotted. Stop the weapon deal and take their weapons and money.", sideMissionColor];
 };
 	
 _waitUntilMarkerPos = nil;
@@ -110,4 +110,4 @@ _successExec =
 	_successHintMessage = format ["The smugglers are dead, the weapons and money are yours!"];
 };
 
-_this call extraMissionProcessor;
+_this call sideMissionProcessor;

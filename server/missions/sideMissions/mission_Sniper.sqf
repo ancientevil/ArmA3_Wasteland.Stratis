@@ -5,27 +5,27 @@
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
-#include "extraMissionDefines.sqf";
+#include "sideMissionDefines.sqf";
 
 private ["_positions", "_boxes1", "_currBox1", "_box1"];
 
 _setupVars =
 {
 	_missionType = "Sniper Nest";
-	_positions = [[12879.5,16773.3,0],[8951.24,20077.1,0],[3185.9,13146.6,0],[17944.4,12226.1,0],[9520.34,15741.5,0]];
-
-	_missionPos = _positions call BIS_fnc_SelectRandom;
+	_locationsArray = SniperMissionMarkers;
 };
 
 _setupObjects =
 {
+	_missionPos = markerPos _missionLocation;
+	
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup,_missionPos] spawn createsniperGroup;
 
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";
 	
-	_missionHintText = format ["A Sniper Nest has been spotted. Head to the marked area and Take them out! Be careful they are fully armed and dangerous!", extraMissionColor];
+	_missionHintText = format ["A Sniper Nest has been spotted. Head to the marked area and Take them out! Be careful they are fully armed and dangerous!", sideMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -50,4 +50,4 @@ _successExec =
 	_successHintMessage = format ["The snipers are dead! Well Done!"];
 };
 
-_this call extraMissionProcessor;
+_this call sideMissionProcessor;
