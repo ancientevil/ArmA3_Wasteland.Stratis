@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "moneyMissionDefines.sqf";
 
-private ["_positions", "_camonet", "_laptop", "_obj", "_randomGroup", "_vehicleName","_table"];
+private ["_positions", "_camonet", "_laptop", "_obj1", "_obj2", "_obj3", "_obj4", "_vehicleName","_table"];
 
 _setupVars =
 {
@@ -28,30 +28,33 @@ _setupObjects =
 	_camonet setDir random 360;
 	_camonet setVariable ["R3F_LOG_disabled", false];
 
-	_missionPos = getPosASL _camonet;
+	_missionPos = getPosATL _camonet;
 
 	_table = createVehicle ["Land_WoodenTable_small_F", _missionPos, [], 0, "CAN COLLIDE"];
-	_table setPosASL [_missionPos select 0, (_missionPos select 1) - 0.25, _missionPos select 2];
+	_table setPosATL [_missionPos select 0, _missionPos select 1, _missionPos select 2];
 	
 	_laptop = createVehicle ["Land_Laptop_unfolded_F", _missionPos, [], 0, "CAN COLLIDE"];
 	_laptop attachTo [_table,[0,0,0.60]];
-	
-	
 
-	_obj = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
-	_obj setPosASL [_missionPos select 0, (_missionPos select 1) + 2, _missionPos select 2];
+	_obj1 = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
+	_obj1 setPosATL [(_missionPos select 0) - 2, (_missionPos select 1) + 2, _missionPos select 2];
+	
+	_obj2 = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
+	_obj2 setPosATL [(_missionPos select 0) + 2, (_missionPos select 1) + 2, _missionPos select 2];
+	
+	_obj3 = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
+	_obj3 setPosATL [(_missionPos select 0) - 2, (_missionPos select 1) - 2, _missionPos select 2];
+	
+	_obj4 = createVehicle ["I_GMG_01_high_F", _missionPos,[], 10,"None"]; 
+	_obj4 setPosATL [(_missionPos select 0) + 2, (_missionPos select 1) - 2, _missionPos select 2];
 
 	AddLaptopHandler = _laptop;
 	publicVariable "AddLaptopHandler";
 
 	_laptop setVariable [ "Done", false, true ];
 
-	// NPC Randomizer 
-	_randomGroup = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
-	_randomGroup2 = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
 	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup,_missionPos] spawn _randomGroup;
-	[_aiGroup,_missionPos] spawn _randomGroup2;
+	[_aiGroup,_missionPos,24,20] spawn createCustomGroup3;
 
 	_aiGroup setCombatMode "RED";
 	_aiGroup setBehaviour "COMBAT";	
@@ -75,7 +78,7 @@ _failedExec =
 	// Mission failed
 	RemoveLaptopHandler = _laptop;
 	publicVariable "RemoveLaptopHandler";
-	{ deleteVehicle _x } forEach [_camonet, _obj, _laptop, _table];
+	{ deleteVehicle _x } forEach [_camonet, _obj1, _obj2, _obj3, _obj4, _laptop, _table];
 };
 
 _successExec =
@@ -84,9 +87,9 @@ _successExec =
 	RemoveLaptopHandler = _laptop;
 	publicVariable "RemoveLaptopHandler";
 	{ deleteVehicle _x } forEach [_camonet, _laptop, _table];
-	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_obj];
+	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_obj1, _obj2, _obj3, _obj4];
 
-	_successHintMessage = format ["The laptop is hacked. Well done!"];
+	_successHintMessage = format ["The laptop is hacked. Go and kill the hacker to get your money back!"];
 };
 
 _this call moneyMissionProcessor;

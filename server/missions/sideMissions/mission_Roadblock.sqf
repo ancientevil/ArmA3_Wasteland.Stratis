@@ -33,12 +33,8 @@ _setupObjects =
 	_obj2 = createVehicle ["I_GMG_01_high_F", _bargate modelToWorld [-8,-2,-4.1], [], 0, "NONE"];
 	_bunker2 setDir _markerDir;
 
-	// NPC Randomizer 
-	_randomGroup = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
-	_randomGroup2 = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5] call BIS_fnc_selectRandom;
 	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup,_missionPos] spawn _randomGroup;
-	[_aiGroup,_missionPos] spawn _randomGroup2;
+	[_aiGroup,_missionPos,12,15] spawn createCustomGroup3;
 	
 	_missionHintText = format ["Enemies have set up an illegal roadblock and are stopping all vehicles! They need to be stopped!", sideMissionColor];
 };
@@ -59,12 +55,13 @@ _successExec =
 {
 	// Mission completed
 	
-	_randomBox = ["mission_Mixed","mission_General","mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
+	_randomBox = ["mission_USLaunchers","mission_USSpecial","mission_Main_A3snipers"] call BIS_fnc_selectRandom;
 	_box1 = createVehicle ["Box_NATO_Wps_F", _missionPos, [], 5, "None"];
 	_box1 setDir random 360;
 	[_box1, _randomBox] call fn_refillbox;
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
 	{ deleteVehicle _x } forEach [_barGate, _bunker1, _bunker2];
+	
 
 	_successHintMessage = format ["The roadblock has been dismantled."];
 };
