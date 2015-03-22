@@ -261,6 +261,7 @@ player createDiaryRecord ["changelog",
  [
 "NL United",
 "
+<br/> [Added] Base relocker (It is hackable and destroyable)
 <br/> [Added] Ability to change uniform texture
 <br/> [Added] Custom view distance ability
 <br/> [Added] Show R.I.P. map marker on corpse location after death
@@ -273,7 +274,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Heal self script
 <br/> [Added] Access to DLC Helicopter pilot seat without DLC
 <br/> [Added] Patrol mission: Airport patrol
-<br/> [Added] Extra missions: Hostile Jet, Smugglers, Snipers and Hack laptop 
+<br/> [Added] New missions: Hostile Jet, Smugglers, Snipers and Hackers
 <br/> [Added] Blufor base for Blufor only
 <br/> [Added] Admin base in saltflats
 <br/> [Added] Intro script

@@ -79,4 +79,6 @@ if (isServer) then
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
 [] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
 
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
+
 [] execVM "addons\scripts\intro.sqf";					// Welcome intro
