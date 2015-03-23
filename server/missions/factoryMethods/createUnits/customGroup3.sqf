@@ -51,7 +51,7 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addPrimaryWeaponItem "optic_Holosight";
+			_unit addPrimaryWeaponItem "optic_Hamr";
 			_unit addMagazine "Titan_AT";
 			_unit addWeapon "launch_Titan_short_F";
 			_unit addMagazine "Titan_AT";
@@ -67,7 +67,7 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
-			_unit addPrimaryWeaponItem "optic_Holosight";
+			_unit addPrimaryWeaponItem "optic_Hamr";
 			_unit addMagazine "Titan_AA";
 			_unit addWeapon "launch_I_Titan_F";
 			_unit addMagazine "Titan_AA";
@@ -77,13 +77,12 @@ for "_i" from 1 to _nbUnits do
 		// Sniper every 7 units
 		case (_i % 7 == 0):
 		{
-			removeAllWeapons _unit;
-			removeAllAssignedItems _unit;
 			_unit addMagazine "7Rnd_408_Mag";
 			_unit addWeapon "srifle_LRR_SOS_F";
 			_unit addMagazine "7Rnd_408_Mag";
 			_unit addMagazine "7Rnd_408_Mag";
 			_unit addMagazine "7Rnd_408_Mag";
+			_unit addPrimaryWeaponItem "optic_tws";
 		};
 		// Rifleman
 		default
@@ -95,7 +94,7 @@ for "_i" from 1 to _nbUnits do
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addPrimaryWeaponItem "optic_Holosight";
+				_unit addPrimaryWeaponItem "optic_Hamr";
 				_unit setRank "SERGEANT";
 			}
 			else
@@ -105,7 +104,7 @@ for "_i" from 1 to _nbUnits do
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
 				_unit addMagazine "30Rnd_65x39_caseless_mag";
-				_unit addPrimaryWeaponItem "optic_Holosight";
+				_unit addPrimaryWeaponItem "optic_Hamr";
 			};
 		};
 	};
