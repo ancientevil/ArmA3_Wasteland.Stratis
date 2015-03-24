@@ -38,7 +38,7 @@ for "_i" from 1 to _nbUnits do
 	removeGoggles _unit;
 
 	_unit addVest "V_TacVest_blk_POLICE";
-	_unit addUniform "U_C_Driver_1_black";
+	_unit addUniform "U_C_Driver_3";
 
 	switch (true) do
 	{
