@@ -58,8 +58,18 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "Titan_AT";
 			_unit selectWeapon "launch_Titan_short_F";
 		};
-		// AA every 6 units
+		// Sniper every 6 units
 		case (_i % 6 == 0):
+		{
+			_unit addMagazine "7Rnd_408_Mag";
+			_unit addWeapon "srifle_LRR_SOS_F";
+			_unit addMagazine "7Rnd_408_Mag";
+			_unit addMagazine "7Rnd_408_Mag";
+			_unit addMagazine "7Rnd_408_Mag";
+			_unit addPrimaryWeaponItem "optic_tws";
+		};
+		// AA every 7 units
+		case (_i % 7 == 0):
 		{
 			_unit addBackpack "B_Carryall_oli";
 			_unit addMagazine "30Rnd_65x39_caseless_mag";
@@ -73,16 +83,6 @@ for "_i" from 1 to _nbUnits do
 			_unit addMagazine "Titan_AA";
 			_unit addMagazine "Titan_AA";
 			_unit selectWeapon "launch_I_Titan_F";
-		};
-		// Sniper every 7 units
-		case (_i % 7 == 0):
-		{
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addWeapon "srifle_LRR_SOS_F";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addMagazine "7Rnd_408_Mag";
-			_unit addPrimaryWeaponItem "optic_tws";
 		};
 		// Rifleman
 		default
