@@ -8,8 +8,7 @@ _ctrlTypes =
 [
 	"mainMission",
 	"moneyMission",
-	"sideMission",
-	"patrolMission"
+	"sideMission"
 ];
 
 _ctrlQuantity = (["A3W_missionsQuantity", 8] call getPublicVar) max 0 min 8;

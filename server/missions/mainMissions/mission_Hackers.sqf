@@ -5,7 +5,7 @@
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
-#include "moneyMissionDefines.sqf";
+#include "mainMissionDefines.sqf";
 
 private ["_positions", "_camonet", "_laptop", "_obj1", "_obj2", "_obj3", "_obj4", "_vehicleName","_table"];
 
@@ -60,7 +60,7 @@ _setupObjects =
 	_aiGroup setBehaviour "COMBAT";	
 	
 	_vehicleName = "Laptop";
-	_missionHintText = format ["<t color='%2'>Hackers</t> are using a laptop to hack your bank accounts. Hacking the laptop successfully will steal 1.5 percent from each on-line players bank account! HURRY TO DEFEND YOUR BANK ACCOUNT OR HACK OTHERS BANK ACCOUNTS!", _vehicleName, moneyMissionColor];
+	_missionHintText = format ["<t color='%2'>Hackers</t> are using a laptop to hack your bank accounts. Hacking the laptop successfully will steal 1.5 percent from each on-line players bank account! HURRY TO DEFEND YOUR BANK ACCOUNT OR HACK OTHERS BANK ACCOUNTS!", _vehicleName, mainMissionColor];
 };
 
 _waitUntilMarkerPos = nil;
@@ -92,4 +92,4 @@ _successExec =
 	_successHintMessage = format ["The laptop is hacked. Go and kill the hacker to get your money back!"];
 };
 
-_this call moneyMissionProcessor;
+_this call mainMissionProcessor;

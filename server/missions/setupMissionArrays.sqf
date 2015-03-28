@@ -18,7 +18,7 @@ MainMissions =
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
 	["mission_CivHeli", 1],
-	["mission_HostileJet", 0.75]
+	["mission_Hackers", 0.5]
 ];
 
 SideMissions =
@@ -32,6 +32,7 @@ SideMissions =
 	["mission_Outpost", 1],
 	["mission_Truck", 1],
 	["mission_Roadblock", 1],
+	["mission_HostileJet", 0.75],
 	["mission_Sniper", 1],
 	["mission_Smugglers", 1]
 ];
@@ -40,11 +41,6 @@ MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 1],
-	["mission_Hackers", 0.25]
-];
-
-PatrolMissions =
-[
 	["mission_militaryPatrol", 1]
 ];
 
@@ -55,7 +51,6 @@ MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTrea
 { _x set [2, false] } forEach MainMissions;
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
-{ _x set [2, false] } forEach PatrolMissions;
 
 MissionSpawnMarkers = [];
 SunkenMissionMarkers = [];

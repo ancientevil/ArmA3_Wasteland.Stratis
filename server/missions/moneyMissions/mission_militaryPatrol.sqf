@@ -5,7 +5,7 @@
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
-#include "patrolMissionDefines.sqf";
+#include "moneyMissionDefines.sqf";
 
 private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_createVehicle1","_createVehicle2","_createVehicle3","_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_cash", "_box1", "_box2", "_box3"];
 
@@ -144,7 +144,7 @@ _setupObjects =
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh4 >> "displayName");
 	_vehicleName3 = getText (configFile >> "CfgVehicles" >> _veh5 >> "displayName");
 	
-	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling a high value location! Stop the patrol and capture the goods and money!", _vehicleName, _vehicleName2, _vehicleName3, patrolMissionColor];
+	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling a high value location! Stop the patrol and capture the goods and money!", _vehicleName, _vehicleName2, _vehicleName3, moneyMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
@@ -187,4 +187,4 @@ _successExec =
 	_successHintMessage = "The patrol has been stopped, the money, crates and vehicles are yours to take.";
 };
 
-_this call patrolMissionProcessor;
+_this call moneyMissionProcessor;
