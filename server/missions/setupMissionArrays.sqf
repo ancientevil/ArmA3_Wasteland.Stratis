@@ -17,6 +17,7 @@ MainMissions =
 	["mission_MBT", 1],
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
+	["mission_AbandonedJet", 0.75],
 	["mission_CivHeli", 1],
 	["mission_Hackers", 0.5]
 ];
