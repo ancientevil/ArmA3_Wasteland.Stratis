@@ -30,14 +30,14 @@
 	["TERRITORY_PYRSOS_TRANSMITTER", "Pyrsos Transmitter", 500, "TRANSMITTER"],
 	["TERRITORY_MILITARY_RESEARCH", "Telos Military Base", 500, "MILITARY"],
 	// Added extra territories from the TOP servers
-	["TERRITORY_0_KAVALA_A", "Kavala (A)", 500],
-	["TERRITORY_0_KAVALA_B", "Kavala (B)", 500],
-	["TERRITORY_0_KAVALA_C", "Kavala (C)", 500],
-	["TERRITORY_1_ALTISAIR_A", "Altis Airport (A)", 500],
-	["TERRITORY_1_ALTISAIR_B", "Altis Airport (B)", 500],
-	["TERRITORY_1_ALTISAIR_C", "Altis Airport (C)", 500],
-	["TERRITORY_6_DOCKS_A", "DOCKS (A)", 500],
-	["TERRITORY_6_DOCKS_B", "DOCKS (B)", 500],
-	["TERRITORY_6_DOCKS_C", "DOCKS (C)", 500],
-	["TERRITORY_6_DOCKS_D", "DOCKS (D)", 500]
+	["TERRITORY_0_KAVALA_A", "Kastro Castle", 500],
+	["TERRITORY_0_KAVALA_B", "Kavala Construction Site", 500],
+	["TERRITORY_0_KAVALA_C", "Kavala Hospital", 500],
+	["TERRITORY_1_ALTISAIR_A", "Altis Airport Military South", 500],
+	["TERRITORY_1_ALTISAIR_B", "Altis Airport Terminal", 500],
+	["TERRITORY_1_ALTISAIR_C", "Altis Airport Military North", 500],
+	["TERRITORY_6_DOCKS_A", "DOCKS North", 500],
+	["TERRITORY_6_DOCKS_B", "DOCKS Center", 500],
+	["TERRITORY_6_DOCKS_C", "DOCKS South", 500],
+	["TERRITORY_6_DOCKS_D", "DOCKS Military", 500]
 ]
