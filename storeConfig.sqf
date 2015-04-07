@@ -309,7 +309,7 @@ headArray = compileFinal str
 	["Protector Helmet (Urban)", "H_HelmetO_oucamo", 50, "hat"],
 	["Defender Helmet (Hex)", "H_HelmetLeaderO_ocamo", 50, "hat"],
 	["Defender Helmet (Urban)", "H_HelmetLeaderO_oucamo", 50, "hat"],
-	// ["Assassin Helmet (Hex)", "H_HelmetSpecO_ocamo", 50, "hat"],
+	["Assassin Helmet (Hex)", "H_HelmetSpecO_ocamo", 50, "hat"],
 	["Assassin Helmet (Black)", "H_HelmetSpecO_blk", 50, "hat"],
 	["MICH", "H_HelmetIA", 50, "hat"],
 	// ["MICH (Camo)", "H_HelmetIA_net", 50, "hat"],
