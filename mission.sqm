@@ -1246,7 +1246,7 @@ class Mission
 					id=95;
 					side="EAST";
 					vehicle="O_engineer_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					skill=0.60000002;
 				};
 			};
