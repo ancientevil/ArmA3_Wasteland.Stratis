@@ -70,20 +70,20 @@ rifleArray = compileFinal str
 	["Mk-1 EMR 7.62 mm (Sand)", "srifle_DMR_03_tan_F", 500], // DLC Sniper Rifle
 	["Mk-1 EMR 7.62 mm (Woodland)", "srifle_DMR_03_woodland_F", 500], // DLC Sniper Rifle
 	["Mk-1 EMR 7.62 mm (Black)", "srifle_DMR_03_F", 500], // DLC Sniper Rifle
+	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 1500], // DLC Sniper Rifle
+	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 1500], // DLC Sniper Rifle
+	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 1500], // DLC Sniper Rifle
+	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 2500], // DLC Sniper Rifle
+	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 2500], // DLC Sniper Rifle
+	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 2500], // DLC Sniper Rifle
+	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 5000], // DLC Sniper Rifle
+	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 5000], // DLC Sniper Rifle
 	
 	// Sniper Rifles
-	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 750], // DLC Sniper Rifle
-	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 750], // DLC Sniper Rifle
-	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 750], // DLC Sniper Rifle
-	["M320 LRR Sniper", "srifle_LRR_SOS_F", 1000],
-	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_SOS_F", 1150],
-	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 1200], // DLC Sniper Rifle
-	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 1200], // DLC Sniper Rifle
-	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 1200], // DLC Sniper Rifle
-	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 1300], // DLC Sniper Rifle
-	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1300], // DLC Sniper Rifle
-	["GM6 Lynx Sniper", "srifle_GM6_SOS_F", 1400],
-	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_SOS_F", 1500]
+	["M320 LRR Sniper", "srifle_LRR_SOS_F", 1250],
+	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_SOS_F", 1350],
+	["GM6 Lynx Sniper", "srifle_GM6_SOS_F", 1650],
+	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_SOS_F", 1750]
 ];
 
 lmgArray = compileFinal str
@@ -193,15 +193,15 @@ ammoArray = compileFinal str
 	["6.5mm 200Rnd Belt Case", "200Rnd_65x39_cased_Box", 150],
 	["6.5mm 200Rnd Tracer (Yellow) Belt Case", "200Rnd_65x39_cased_Box_Tracer", 125],
 	["7.62mm 10Rnd Mag", "10Rnd_762x54_Mag", 15],
-	["7.62mm 20Rnd Mag", "20Rnd_762x51_Mag", 25],
+	["7.62mm 20Rnd Mag", "20Rnd_762x51_Mag", 55],
 	["7.62mm 150Rnd Box", "150Rnd_762x54_Box", 150],
 	["7.62mm 150Rnd Tracer (Green) Box", "150Rnd_762x54_Box_Tracer", 125],
-	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 35], //DLC Ammo
+	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 65], //DLC Ammo
 	[".338 NM 130Rnd Belt", "130Rnd_338_Mag", 150], //DLC Ammo
 	[".408 7Rnd Cheetah Mag", "7Rnd_408_Mag", 50],
-	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 35], //DLC Ammo
+	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 65], //DLC Ammo
 	["9.3mm 150Rnd Belt", "150Rnd_93x64_Mag", 150], //DLC Ammo
-	["12.7mm 10Rnd Mag", "10Rnd_127x54_Mag", 55], //DLC Ammo
+	["12.7mm 10Rnd Mag", "10Rnd_127x54_Mag", 75], //DLC Ammo
 	["12.7mm 5Rnd Mag", "5Rnd_127x108_Mag", 50],
 	["12.7mm 5Rnd Armor-Piercing Mag", "5Rnd_127x108_APDS_Mag", 60],
 	["RPG-42 Anti-Tank Rocket", "RPG32_F", 250],              // Direct damage: high      | Splash damage: low    | Guidance: none
