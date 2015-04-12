@@ -81,6 +81,7 @@ class CfgFunctions
 	class A3W
 	{
 		#include "server\CfgFunctions.hpp"
+		#include "client\CfgFunctions.hpp"
 	};
 };
 
