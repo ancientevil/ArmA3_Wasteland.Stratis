@@ -13,6 +13,23 @@ player createDiarySubject ["credits", "Credits"];
 
 player createDiaryRecord ["changelog",
 [
+"v1.1b",
+"
+<br/>[Added] Marksmen DLC content
+<br/>[Added] Prevent usage of commander camera
+<br/>[Added] Emergency eject hotkey (Ctrl + " + actionKeysNames "GetOut" + ")
+<br/>[Added] Restricted UAV connection to owner's group
+<br/>[Changed] Improved purchased vehicle setup time
+<br/>[Changed] Admins can now use global voice chat
+<br/>[Changed] Updated antihack
+<br/>[Fixed] Corpses not being ejected from vehicles
+<br/>[Fixed] Thermal imaging not working for UAVs
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v1.1",
 "
 <br/>[Added] ATMs
@@ -282,7 +299,6 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Device detector (IP Cameras and Spawn Beacons)
 <br/> [Added] Resupply truck
 <br/> [Added] Donator bases with donator lock state
-<br/> [Added] UAV for player only unlock by BadVolt and Micovery
 <br/> [Added] Mortar to one mission as reward
 <br/> [Removed] Mortar from store
 <br/> [Changed] Raise some prices
