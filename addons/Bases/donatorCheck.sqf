@@ -27,8 +27,7 @@ _IsAllowed = false;
 // player groupChat format["Starting Donator Check Script 3"]; // Debug
 
 if ((_IsProtected) && !(_IsAllowed)) exitwith {	 
-	hint "You are not allowed to log at this base! Random teleporting you!";
-	player groupChat format["You are not allowed to log at this base! Random teleporting you!"];
+	player groupChat format["You are not allowed to log in at this base! Random teleporting you!"];
 	// player groupChat format["Starting Donator Teleport"]; // Debug
 	player spawn spawnRandom;
 };
