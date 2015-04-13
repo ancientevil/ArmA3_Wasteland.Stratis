@@ -675,6 +675,7 @@ genObjectsArray = compileFinal str
 	["Military Cargo HQ", "Land_Cargo_HQ_V1_F", 12500, "object"], // Added on player request
 	["Concrete Ramp", "Land_RampConcrete_F", 350, "object"],
 	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 500, "object"],
+	["Concrete Block", "BlockConcrete_F", 10000, "object"],
 	["Scaffolding", "Land_Scaffolding_F", 250, "object"],
 	["Food sacks", "Land_Sacks_goods_F", 5000, "object"], // Added on player request
 	["Water Barrel", "Land_BarrelWater_F", 5000, "object"] // Added on player request
