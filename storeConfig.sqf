@@ -20,7 +20,8 @@ pistolArray = compileFinal str
 	["Rook-40 Pistol", "hgun_Rook40_F", 50],
 	["ACP-C2 Pistol", "hgun_ACPC2_F", 75],
 	["Zubr Revolver", "hgun_Pistol_heavy_02_F", 75],
-	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100]
+	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100],
+	["Starter Pistol", "hgun_Pistol_Signal_F", 150]
 ];
 
 smgArray = compileFinal str
@@ -70,6 +71,7 @@ rifleArray = compileFinal str
 	["Mk-1 EMR Rifle (Sand) [DLC]", "srifle_DMR_03_tan_F", 500], // DLC Sniper Rifle
 	["Mk-1 EMR Rifle (Woodland) [DLC]", "srifle_DMR_03_woodland_F", 500], // DLC Sniper Rifle
 	["Mk-1 EMR Rifle (Black) [DLC]", "srifle_DMR_03_F", 500], // DLC Sniper Rifle
+	//["NATO DMR (provisional) spotter [DLC]", "srifle_DMR_03_spotter_F", 500], // DLC Sniper Rifle - BUGGED
 	["MAR-10 Rifle (Black) [DLC]", "srifle_DMR_02_F", 1500], // DLC Sniper Rifle
 	["MAR-10 Rifle (Camo) [DLC]", "srifle_DMR_02_camo_F", 1500], // DLC Sniper Rifle
 	["MAR-10 Rifle (Sand) [DLC]", "srifle_DMR_02_sniper_F", 1500], // DLC Sniper Rifle
@@ -149,8 +151,19 @@ staticGunsArray = compileFinal str
 
 throwputArray = compileFinal str
 [
+	//["Stone", "HandGrenade_Stone", 5], // Doesn't work
+	["Smoke Grenade (White)", "SmokeShell", 50],
+	["Smoke Grenade (Purple)", "SmokeShellPurple", 50],
+	["Smoke Grenade (Blue)", "SmokeShellBlue", 50],
+	["Smoke Grenade (Green)", "SmokeShellGreen", 50],
+	["Smoke Grenade (Yellow)", "SmokeShellYellow", 50],
+	["Smoke Grenade (Orange)", "SmokeShellOrange", 50],
+	["Smoke Grenade (Red)", "SmokeShellRed", 50],
 	["Mini Grenade", "MiniGrenade", 50],
 	["Frag Grenade", "HandGrenade", 100],
+	["IR Grenade [NATO]", "B_IR_Grenade", 150],
+	["IR Grenade [CSAT]", "O_IR_Grenade", 150],
+	["IR Grenade [AAF]", "I_IR_Grenade", 150],
 	["APERS Tripwire Mine", "APERSTripMine_Wire_Mag", 200],
 	["APERS Bounding Mine", "APERSBoundingMine_Range_Mag", 250],
 	["APERS Mine", "APERSMine_Range_Mag", 300],
@@ -159,19 +172,18 @@ throwputArray = compileFinal str
 	["AT Mine", "ATMine_Range_Mag", 400],
 	["Explosive Charge", "DemoCharge_Remote_Mag", 450],
 	["Explosive Satchel", "SatchelCharge_Remote_Mag", 500],
-	["Smoke Grenade (White)", "SmokeShell", 50],
-	["Smoke Grenade (Purple)", "SmokeShellPurple", 50],
-	["Smoke Grenade (Blue)", "SmokeShellBlue", 50],
-	["Smoke Grenade (Green)", "SmokeShellGreen", 50],
-	["Smoke Grenade (Yellow)", "SmokeShellYellow", 50],
-	["Smoke Grenade (Orange)", "SmokeShellOrange", 50],
-	["Smoke Grenade (Red)", "SmokeShellRed", 50]
+	["Small IED (Urban)", "IEDUrbanSmall_Remote_Mag", 1500],
+	["Small IED (Dug-in)", "IEDLandSmall_Remote_Mag", 1500],
+	["Large IED (Urban)", "IEDUrbanBig_Remote_Mag", 2500],
+	["Large IED (Dug-in)", "IEDLandBig_Remote_Mag", 2500]
 ];
 
 //Gun Store Ammo List
 //Text name, classname, buy cost
 ammoArray = compileFinal str
 [
+	["6Rnd Signal Cylinder (Green)", "6Rnd_GreenSignal_F", 10],
+	["6Rnd Signal Cylinder (Red)", "6Rnd_RedSignal_F", 10],
 	["9mm 16Rnd Mag", "16Rnd_9x21_Mag", 10],
 	["9mm 30Rnd Mag", "30Rnd_9x21_Mag", 15],
 	[".45 ACP 6Rnd Cylinder", "6Rnd_45ACP_Cylinder", 5],
