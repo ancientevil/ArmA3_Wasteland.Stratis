@@ -25,10 +25,10 @@ storeOwnerConfig = compileFinal str
 	["GunStore5", 5, -488, []],
 
 	// Buttons you can disable: "Land", "Armored", "Tanks", "Helicopters", "Boats", "Planes"
-	["VehStore1", 1, 75, []],
-	["VehStore2", 6, 45, ["Boats"]],
-	["VehStore3", 4, 250, ["Boats"]],
-	["VehStore4", 5, 155, ["Boats"]],
+	["VehStore1", 1, 75, ["Planes"]], // Planes removed
+	["VehStore2", 6, 45, ["Planes","Boats"]], // Planes removed
+	["VehStore3", 4, 250, ["Planes","Boats"]], // Planes removed
+	["VehStore4", 5, 155, ["Planes","Boats"]], // Planes removed
 	["VehStore5", 0, 190, ["Planes"]],
 	["VehStore6", 5, -261, ["Planes"]],
 	["VehStore7", 1, 125, ["Planes","Boats"]]
