@@ -44,7 +44,7 @@ _setupObjects =
 		};
 	};
 
-	// Reset all flares to 120
+	// Reset all flares to 60
 	if (_vehicleClass isKindOf "Air") then
 	{
 		{
@@ -54,7 +54,7 @@ _setupObjects =
 			};
 		} forEach getArray (configFile >> "CfgVehicles" >> _vehicleClass >> "magazines");
 
-		_vehicle addMagazineTurret ["120Rnd_CMFlare_Chaff_Magazine", [-1]];
+		_vehicle addMagazineTurret ["60Rnd_CMFlare_Chaff_Magazine", [-1]];
 	};
 
 	reload _vehicle;
@@ -72,7 +72,7 @@ _setupObjects =
 
 _waitUntilMarkerPos = nil;
 _waitUntilExec = nil;
-_waitUntilCondition = {!alive _vehicle};
+_waitUntilCondition = nil;
 
 _failedExec =
 {
