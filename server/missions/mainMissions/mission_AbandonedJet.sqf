@@ -22,7 +22,6 @@ _setupVars =
 
 	_missionType = "Abandoned Jet";
 	_locationsArray = MissionSpawnMarkers;
-
 };
 
 _setupObjects =
