@@ -260,19 +260,19 @@ accessoriesArray = compileFinal str
 	["Suppressor 6.5mm", "muzzle_snds_H", 100, "item"],
 	["Suppressor 6.5mm LMG", "muzzle_snds_H_MG", 125, "item"],
 	["Suppressor 7.62mm", "muzzle_snds_B", 125, "item"],
-	["Suppressor .338 (Black) [DLC]", "muzzle_snds_338_black", 150, "item"], // DLC Item
+	["Suppressor .338 [DLC]", "muzzle_snds_338_black", 150, "item"], // DLC Item
 	["Suppressor .338 (Green) [DLC]", "muzzle_snds_338_green", 150, "item"], // DLC Item
 	["Suppressor .338 (Sand) [DLC]", "muzzle_snds_338_sand", 175, "item"], // DLC Item
-	["Suppressor 9.3mm (Black) [DLC]", "muzzle_snds_93mmg", 175, "item"], // DLC Item
+	["Suppressor 9.3mm [DLC]", "muzzle_snds_93mmg", 175, "item"], // DLC Item
 	["Suppressor 9.3mm (Tan) [DLC]", "muzzle_snds_93mmg_tan", 175, "item"], // DLC Item
-	["Bipod (Black) (NATO)", "bipod_01_F_blk", 500, "item"], // DLC Item
-	["Bipod (Black) (CSAT)", "bipod_02_F_blk", 500, "item"], // DLC Item
-	["Bipod (Black) (AAF)", "bipod_03_F_blk", 500, "item"], // DLC Item
-	["Bipod (MTP) (NATO)", "bipod_01_F_mtp", 500, "item"], // DLC Item
-	["Bipod (Hex) (CSAT)", "bipod_02_F_hex", 500, "item"], // DLC Item
-	["Bipod (Olive) (AAF)", "bipod_03_F_oli", 500, "item"], // DLC Item
-	["Bipod (Sand) (NATO)", "bipod_01_F_snd", 500, "item"], // DLC Item
-	["Bipod (Tan) (CSAT)", "bipod_02_F_tan", 500, "item"], // DLC Item 
+	["Bipod (NATO)", "bipod_01_F_blk", 500, "item"], // DLC Item
+	["Bipod (CSAT)", "bipod_02_F_blk", 500, "item"], // DLC Item
+	["Bipod (AAF)", "bipod_03_F_blk", 500, "item"], // DLC Item
+	["Bipod (MTP)", "bipod_01_F_mtp", 500, "item"], // DLC Item
+	["Bipod (Hex)", "bipod_02_F_hex", 500, "item"], // DLC Item
+	["Bipod (Olive)", "bipod_03_F_oli", 500, "item"], // DLC Item
+	["Bipod (Sand)", "bipod_01_F_snd", 500, "item"], // DLC Item
+	["Bipod (Tan)", "bipod_02_F_tan", 500, "item"], // DLC Item 
 	["Flashlight", "acc_flashlight", 25, "item"],
 	["IR Laser Pointer", "acc_pointer_IR", 25, "item"],
 	["Yorris Sight (Zubr Revolver)", "optic_Yorris", 50, "item"],
@@ -287,13 +287,13 @@ accessoriesArray = compileFinal str
 	["RCO", "optic_Hamr", 150, "item"],
 	["MOS", "optic_SOS", 150, "item"],
 	["DMS", "optic_DMS", 175, "item"],
-	["Kahlia (Black)", "optic_KHS_blk", 200, "item"], // DLC Item
-	["Kahlia (Hex)", "optic_KHS_hex", 200, "item"], // DLC Item
-	["Kahlia (Old)", "optic_KHS_old", 200, "item"], // DLC Item
-	["Kahlia (Tan)", "optic_KHS_tan", 200, "item"], // DLC Item
-	["AMS (Black)", "optic_AMS", 300, "item"], // DLC Item
-	["AMS (Khaki)", "optic_AMS_khk", 300, "item"], // DLC Item
-	["AMS (Sand)", "optic_AMS_snd", 300, "item"], // DLC Item
+	["AMS [DLC]", "optic_AMS", 300, "item"], // DLC Item
+	["AMS (Khaki) [DLC]", "optic_AMS_khk", 300, "item"], // DLC Item
+	["AMS (Sand) [DLC]", "optic_AMS_snd", 300, "item"], // DLC Item
+	["Kahlia [DLC]", "optic_KHS_blk", 200, "item"], // DLC Item
+	["Kahlia (Hex) [DLC]", "optic_KHS_hex", 200, "item"], // DLC Item
+	["Kahlia (Old) [DLC]", "optic_KHS_old", 200, "item"], // DLC Item
+	["Kahlia (Tan) [DLC]", "optic_KHS_tan", 200, "item"], // DLC Item
 	["LRPS", "optic_LRPS", 500, "item"],
 	["NVS", "optic_NVS", 2500, "item"],
 	["TWS", "optic_tws", 7500, "item"],
