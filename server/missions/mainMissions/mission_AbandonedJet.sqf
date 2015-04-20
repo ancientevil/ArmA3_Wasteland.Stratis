@@ -72,7 +72,8 @@ _setupObjects =
 
 _waitUntilMarkerPos = nil;
 _waitUntilExec = nil;
-_waitUntilCondition = nil;
+//_waitUntilCondition = nil;
+_waitUntilCondition = {!alive _vehicle};
 
 _failedExec =
 {
