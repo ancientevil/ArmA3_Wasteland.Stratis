@@ -19,7 +19,7 @@ _setupVars =
 _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
-	_smugglerVeh = ["I_MRAP_03_hmg_F"] call BIS_fnc_selectRandom; 
+	_smugglerVeh = ["B_MRAP_01_hmg_F","O_MRAP_02_hmg_F","I_MRAP_03_hmg_F"] call BIS_fnc_selectRandom; 
 
 	_vehicle1 = [_smugglerVeh,[(_missionPos select 0) - 5, (_missionPos select 1) + 10,0],0.5,1,0,"NONE"] call createMissionVehicle;
 	_vehicle1 setVariable [call vChecksum, true, false];
