@@ -103,7 +103,7 @@ EtV_AttachCharge =
 		_explosive attachTo [_nearVehicle];
 		[_explosive,_random0,_random1] call BIS_fnc_SetPitchBank;
 		_unit setVariable ["charges",(_unit getVariable ["charges",[]]) + [_explosive]];
-		[_explosive,_unit] spawn EtV_TimedCharge;
+		//[_explosive,_unit] spawn EtV_TimedCharge;
 	};
 };
 
