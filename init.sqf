@@ -77,11 +77,12 @@ if (isServer) then
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
-[] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
-[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+[] execVM "addons\laptop\init.sqf";							// Addon for hack laptop mission
+[] execVM "addons\vactions\functions.sqf";					// Micovery vehicle actions
 
-[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
-[] execVM "addons\HvT\HvT.sqf"; 						// High Value Target
-[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";		// Fastrope
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";				// Keypad for base locking
+[] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
+[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";			// Fastrope
+[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";	// Mag Repacker
 
-[] execVM "addons\scripts\intro.sqf";					// Welcome intro
+[] execVM "addons\scripts\intro.sqf";						// Welcome intro

@@ -56,6 +56,7 @@ loadScreen = "mapConfig\Loading.jpg";
 #include "addons\proving_ground\PG_config.hpp"
 
 #include "client\systems\hud\dialog\downloadData.hpp"
+#include "addons\outlw_magRepack\MagRepack_config.hpp"
 
 #include "addons\cctv\ui.hpp"
 #include "addons\cctv\laptop_flat_menu.hpp"
