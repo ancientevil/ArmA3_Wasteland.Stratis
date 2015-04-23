@@ -19,7 +19,7 @@ storeOwnerConfig = compileFinal str
 	["GenStore7", 1, 270, []],
 
 	["GunStore1", 1, 0, []],
-	["GunStore2", 1, 75, []],
+	["GunStore2", 2, 210, []],
 	["GunStore3", 6, 135, []],
 	["GunStore4", 1, 65, []],
 	["GunStore5", 5, -488, []],
@@ -31,7 +31,7 @@ storeOwnerConfig = compileFinal str
 	["VehStore4", 5, 155, ["Planes","Boats"]], // Planes removed
 	["VehStore5", 0, 190, ["Planes"]],
 	["VehStore6", 5, -261, ["Planes"]],
-	["VehStore7", 1, 125, ["Planes","Boats"]]
+	["VehStore7", 1, 75, ["Planes","Boats"]]
 ];
 
 // Outfits for store owners
