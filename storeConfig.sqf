@@ -20,7 +20,7 @@ pistolArray = compileFinal str
 	["Rook-40 Pistol", "hgun_Rook40_F", 50],
 	["ACP-C2 Pistol", "hgun_ACPC2_F", 75],
 	["Zubr Revolver", "hgun_Pistol_heavy_02_F", 75],
-	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100]
+	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100],
 	["Starter Pistol", "hgun_Pistol_Signal_F", 25]
 ];
 
