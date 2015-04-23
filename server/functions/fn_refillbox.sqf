@@ -77,10 +77,10 @@ switch (_boxType) do
 		_boxItems =
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
-			["wep", ["srifle_DMR_03_multicam_F", "srifle_DMR_02_sniper_F", "srifle_DMR_05_hex_F", "srifle_DMR_04_Tan_F"], 2,4],
+			["wep", ["srifle_DMR_03_multicam_F", "srifle_DMR_02_sniper_F", "srifle_DMR_05_hex_F", "srifle_DMR_04_Tan_F"], RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(4,6)],
 			["itm", ["V_RebreatherB", "V_PlateCarrierIAGL_dgtl", "V_TacVest_camo", "V_PlateCarrierGL_rgr"], RANDOM_BETWEEN(1,8)],
 			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(2,5)],
-			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], 3]
+			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], RANDOM_BETWEEN(1,3)]
 		];
 	};
 	case "airdrop_DLC_LMGs":
@@ -88,10 +88,10 @@ switch (_boxType) do
 		_boxItems =
 		[
 			// Item type, Item class(es), # of items, # of magazines per weapon
-			["wep", ["MMG_02_black_F", "MMG_01_hex_F"], 2,5],
+			["wep", ["MMG_02_black_F", "MMG_01_hex_F"], RANDOM_BETWEEN(1,2), RANDOM_BETWEEN(4,6)],
 			["itm", ["V_RebreatherB", "V_PlateCarrierIAGL_dgtl", "V_TacVest_camo", "V_PlateCarrierGL_rgr"], RANDOM_BETWEEN(1,8)],
 			["itm", ["B_Carryall_mcamo", "B_Kitbag_mcamo"], RANDOM_BETWEEN(2,5)],
-			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], 2]
+			["itm", ["bipod_01_F_blk", "bipod_02_F_hex"], RANDOM_BETWEEN(1,2)]
 		];
 	};
 };
