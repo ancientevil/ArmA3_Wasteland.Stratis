@@ -19,7 +19,7 @@ APOC_AA_SupOptions =
 [// ["stringItemName", 	"Crate Type for fn_refillBox 	,Price," drop type"]
 ["Launchers", 			"mission_USLaunchers", 			35000, "supply"],
 ["Assault Rifle", 		"mission_USSpecial", 			25000, "supply"],
-["Sniper Rifles", 		"mission_main_A3snipers", 		35000, "supply"],
+["Sniper Rifles", 		"mission_Main_A3snipers", 		35000, "supply"],
 ["DLC Rifles", 			"airdrop_DLC_Rifles", 			40000, "supply"],
 ["DLC LMGs", 			"airdrop_DLC_LMGs", 			45000, "supply"],
 
