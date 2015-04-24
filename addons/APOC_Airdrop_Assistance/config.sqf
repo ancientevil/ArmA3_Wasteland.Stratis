@@ -25,6 +25,6 @@ APOC_AA_SupOptions =
 ["Sniper Rifles", 		"airdrop_Snipers", 				50000, "supply"],
 
 //"Menu Text",			"Crate Type", 			"Cost", "drop type"
-["Food",				"Land_Sacks_goods_F",	5000, 	"picnic"],
-["Water",				"Land_BarrelWater_F",	5000, 	"picnic"]
+["Food",				"Land_Sacks_goods_F",	10000, 	"picnic"],
+["Water",				"Land_BarrelWater_F",	10000, 	"picnic"]
 ];
