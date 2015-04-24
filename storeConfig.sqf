@@ -298,7 +298,7 @@ accessoriesArray = compileFinal str
 	["NVS", "optic_NVS", 1500, "item"],
 	["TWS", "optic_tws", 7500, "item"],
 	["TWS MG", "optic_tws_mg", 8500, "item"],
-	["Nightstalker", "optic_Nightstalker", 1000, "item"]
+	["Nightstalker", "optic_Nightstalker", 10000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -596,7 +596,7 @@ genItemArray = compileFinal str
 	["NV Goggles Green", "NVGoggles_INDEP", 500, "nvg"],
 	["Binoculars", "Binocular", 500, "binoc"],
 	["Rangefinder", "Rangefinder", 1000, "binoc"],
-	["Laser Designator", "Laserdesignator", 1500, "binoc"],
+	["Laser Designator", "Laserdesignator", 2500, "binoc"],
 	["Chemlight (Blue)", "Chemlight_blue", 25, "mag"],
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
 	["Chemlight (Yellow)", "Chemlight_yellow", 25, "mag"],
@@ -683,8 +683,8 @@ genObjectsArray = compileFinal str
 	["Bag Bunker (Large)", "Land_BagBunker_Large_F", 1000, "object"],
 	["Bag Bunker Tower", "Land_BagBunker_Tower_F", 2000, "object"],
 	["Military Cargo Post", "Land_Cargo_Patrol_V1_F", 5000, "object"],
-	["Military Cargo Tower", "Land_Cargo_Tower_V1_F", 17500, "object"],
-	["Military Cargo HQ", "Land_Cargo_HQ_V1_F", 20000, "object"], // Added on player request
+	["Military Cargo Tower", "Land_Cargo_Tower_V1_F", 7500, "object"],
+	["Military Cargo HQ", "Land_Cargo_HQ_V1_F", 10000, "object"], // Added on player request
 	["Concrete Ramp", "Land_RampConcrete_F", 1000, "object"],
 	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 1500, "object"],
 	["Concrete Block", "BlockConcrete_F", 5000, "object"],
