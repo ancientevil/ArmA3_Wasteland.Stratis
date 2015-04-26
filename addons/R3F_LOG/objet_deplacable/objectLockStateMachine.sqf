@@ -34,8 +34,12 @@ if ((_IsProtected) && !(_IsAllowed)) exitwith {
 };
 //End donator part
 
-if (((_object distance getMarkerPos  "_BluBaseMarker") < 100) && !(side player == blufor)) exitwith {
+if (((_object distance getMarkerPos "_BluBaseMarker") < 100) && !(side player == blufor)) exitwith {
 	hint "This base can only be changed by Blufor"; R3F_LOG_mutex_local_verrou = false;
+};
+
+if (((_object distance getMarkerPos "_OPFBaseMarker") < 100) && !(side player == opfor)) exitwith {
+	hint "This base can only be changed by Opfor"; R3F_LOG_mutex_local_verrou = false;
 };
 
 _totalDuration = 0;
