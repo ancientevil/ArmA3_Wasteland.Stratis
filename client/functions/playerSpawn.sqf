@@ -18,7 +18,13 @@ if (!isNil "pvar_teamKillList" && {playerSide in [BLUFOR,OPFOR]}) then
 		[player, "AinjPpneMstpSnonWrflDnon"] call switchMoveGlobal;
 		9999 cutText ["", "BLACK", 0.01];
 		0 fadeSound 0;
+		
+		pvar_teamSwitchUnlock = getPlayerUID player;
+		publicVariableServer "pvar_teamSwitchUnlock";
 
+		pvar_teamSwitchLock = [getPlayerUID player, INDEPENDENT];
+		publicVariableServer "pvar_teamSwitchLock";
+		
 		uiNamespace setVariable ["BIS_fnc_guiMessage_status", false];
 		_msgBox = [localize "STR_WL_Loading_Teamkiller"] spawn BIS_fnc_guiMessage;
 		_time = diag_tickTime;
