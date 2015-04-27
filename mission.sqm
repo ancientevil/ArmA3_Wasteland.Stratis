@@ -13486,8 +13486,8 @@ class Mission
 		};
 		class Item1083
 		{
-			position[]={22734.018,17.669352,6968.5938};
-			azimut=53.851101;
+			position[]={22800.67,23.390551,7009.8604};
+			azimut=44.90612;
 			id=1251;
 			side="EMPTY";
 			vehicle="B_Truck_01_box_F";
@@ -22644,7 +22644,7 @@ class Mission
 		};
 		class Item226
 		{
-			position[]={22734.115,17.694054,6968.7793};
+			position[]={22800.768,23.400312,7010.0459};
 			name="Sell_Truck_4";
 			text="Sell_Truck_4";
 			type="Empty";
