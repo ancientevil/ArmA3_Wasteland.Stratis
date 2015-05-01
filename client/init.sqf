@@ -143,6 +143,7 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\water_edge\functions.sqf";		// Water edge fix
 [] execVM "addons\cctv\functions.sqf";				// CCTV Camera addon
 [] execVM "addons\EtV\init.sqf";					// Explosives to Vehicles
+[] execVM "addons\Safe\init.sqf";					// Safe init
 
 call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
