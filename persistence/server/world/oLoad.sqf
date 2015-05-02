@@ -95,6 +95,7 @@ _exclObjectIDs = [];
 		else
 		{
 			_obj allowDamage false;
+			_obj setDamage 0;
 		};
 
 		{
