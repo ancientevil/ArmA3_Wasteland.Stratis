@@ -110,7 +110,7 @@ _exclObjectIDs = [];
 				case "password": { _value }; // BASE LOCKER - SAFE
 				case "lockedSafe": { _value }; // SAFE
 				case "A3W_inventoryLockR3F": { _value }; // SAFE
-				case "R3F_LOG_disabled": { _value };
+				case "R3F_LOG_disabled": { _value }; // SAFE
 				case "ownerName":
 				{
 					switch (typeName _value) do
