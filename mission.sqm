@@ -6174,7 +6174,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Canal_Wall_10m_F";
 			skill=0.60000002;
-			init="this setPosATL [21949.242188,21083.408203,10.5366];this setVectorUp [0,0,+0.1];21949.242188,21083.408203,10.5366;this allowDamage false;";
+			init="this setPosATL [21949.242188,21083.408203,11.5366];this setVectorUp [0,0,+0.1];21949.242188,21083.408203,10.5366;this allowDamage false;";
 		};
 		class Item374
 		{
@@ -6184,7 +6184,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Canal_Wall_10m_F";
 			skill=0.60000002;
-			init="this setPosATL [21941.121094,21089.119141,10.8155];this setVectorUp [0,0,+0.1];21941.121094,21089.119141,10.8155;this allowDamage false;";
+			init="this setPosATL [21941.121094,21089.119141,11.8155];this setVectorUp [0,0,+0.1];21941.121094,21089.119141,10.8155;this allowDamage false;";
 		};
 		class Item375
 		{
@@ -18433,7 +18433,7 @@ class Mission
 		{
 			position[]={21947.883,27.328876,21086.516};
 			azimut=214.998;
-			offsetY=4;
+			offsetY=4.5;
 			id=1700;
 			side="EMPTY";
 			vehicle="Land_Canal_WallSmall_10m_F";
@@ -18444,7 +18444,7 @@ class Mission
 		{
 			position[]={21942.436,26.651405,21078.969};
 			azimut=35.998798;
-			offsetY=4.5;
+			offsetY=5;
 			id=1701;
 			side="EMPTY";
 			vehicle="Land_Canal_WallSmall_10m_F";
