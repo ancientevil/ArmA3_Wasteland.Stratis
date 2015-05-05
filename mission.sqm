@@ -6154,7 +6154,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Canal_Wall_10m_F";
 			skill=0.60000002;
-			init="this setPosATL [21948.441406,21080.417969,6.3121];this setVectorUp [0,0,+0.1];21948.441406,21080.417969,6.3121;this allowDamage false;";
+			init="this setPosATL [21949.441406,21079.417969,6.3121];this setVectorUp [0,0,+0.1];21949.441406,21079.417969,6.3121;this allowDamage false;";
 		};
 		class Item372
 		{
@@ -6164,7 +6164,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Canal_Wall_10m_F";
 			skill=0.60000002;
-			init="this setPosATL [21941.890625,21085.0957031,6.4976];this setVectorUp [0,0,+0.1];21941.890625,21085.0957031,6.4976;this allowDamage false;";
+			init="this setPosATL [21940.890625,21086.0957031,6.4976];this setVectorUp [0,0,+0.1];21940.890625,21086.0957031,6.4976;this allowDamage false;";
 		};
 		class Item373
 		{
