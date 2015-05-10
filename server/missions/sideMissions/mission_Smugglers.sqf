@@ -7,7 +7,7 @@
 if (!isServer) exitwith {};
 #include "sideMissionDefines.sqf";
 
-private ["_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_randomBox", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2"];
+private ["_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_currBox1", "_randomBox", "_box1", "_boxes2", "_currBox2", "_box2", "_cashrandomizera", "_cashamountrandomizera", "_cashpilerandomizera", "_casha", "_cashamounta", "_cashpilea", "_cashrandomizerb", "_cashamountrandomizerb", "_cashpilerandomizerb", "_cashb", "_cashamountb", "_cashpileb", "_cash1", "_cash2", "_drop_item", "_drugpilerandomizer", "_drugpile"];
 
 _setupVars =
 {
@@ -66,6 +66,25 @@ _failedExec =
 	{ deleteVehicle _x } forEach [_box1, _box2, _vehicle1, _vehicle2];
 };
 
+_drop_item = 
+{
+	private["_item", "_pos"];
+	_item = _this select 0;
+	_pos = _this select 1;
+
+	if (isNil "_item" || {typeName _item != typeName [] || {count(_item) != 2}}) exitWith {};
+	if (isNil "_pos" || {typeName _pos != typeName [] || {count(_pos) != 3}}) exitWith {};
+
+	private["_id", "_class"];
+	_id = _item select 0;
+	_class = _item select 1;
+
+	private["_obj"];
+	_obj = createVehicle [_class, _pos, [], 5, "None"];
+	_obj setPos ([_pos, [[2 + random 3,0,0], random 360] call BIS_fnc_rotateVector2D] call BIS_fnc_vectorAdd);
+	_obj setVariable ["mf_item_id", _id, true];
+};
+
 _successExec =
 {
 	// Mission completed
@@ -107,7 +126,22 @@ _successExec =
 		_cash2 setVariable ["owner", "world", true];
 	};
 	
-	_successHintMessage = format ["The smugglers are dead, the weapons and money are yours!"];
+	_drugpilerandomizer = [4,8];
+	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
+	
+	for "_i" from 1 to _drugpile do 
+	{
+	  private["_item"];
+	  _item = [
+	          ["lsd", "Land_WaterPurificationTablets_F"],
+	          ["marijuana", "Land_VitaminBottle_F"],
+	          ["cocaine","Land_PowderedMilk_F"],
+	          ["heroin", "Land_PainKillers_F"]
+	        ] call BIS_fnc_selectRandom;
+	  [_item, _lastPos] call _drop_item;
+	};
+	
+	_successHintMessage = format ["The smugglers are dead, the weapons, drugs and money are yours!"];
 };
 
 _this call sideMissionProcessor;
