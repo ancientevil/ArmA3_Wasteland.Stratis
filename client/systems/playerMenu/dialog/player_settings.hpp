@@ -184,13 +184,13 @@ class playerSettings {
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 		
-		class btnDistanceCustom : w_RscButton {
+		/*class btnDistanceCustom : w_RscButton {
 			idc = -1;
 			text = "Custom";
 			onButtonClick = "[] execVM 'addons\taw_vd\fn_openTAWVD.sqf'";
 			x = 0.158; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
-		};
+		};*/ // Disable viewdistance button for now
 
 		class btnDistanceInsane : w_RscButton {
 			text = "Insane";
