@@ -143,7 +143,9 @@ _playerMoney = _player getVariable ["bmoney", 0];
 			};  //Thought you'd be tricky and not pay, eh?
 
 _playermoney = _player setVariable ["bmoney", _playermoney - _price, true];
-[_player] spawn fn_savePlayerData;
+//[_player] spawn fn_savePlayerData;
+[_player,"fn_savePlayerData",_player,false,false] call BIS_fnc_MP;
+
 //  Now on to the fun stuff:
 
 diag_log format ["Apoc's Airdrop Assistance - Object at %1, Detach Up Next", position _object];  //A little log love to confirm the location of this new creature
