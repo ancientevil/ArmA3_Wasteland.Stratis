@@ -78,8 +78,8 @@ rifleArray = compileFinal str
 	["Cyrus Rifle (Black) [DLC]", "srifle_DMR_05_blk_F", 1000], // DLC Sniper Rifle
 	["Cyrus Rifle (Hex) [DLC]", "srifle_DMR_05_hex_F", 1000], // DLC Sniper Rifle
 	["Cyrus Rifle (Tan) [DLC]", "srifle_DMR_05_tan_f", 1000], // DLC Sniper Rifle
-	["ASP-1 Kir Rifle (Black) [DLC]", "srifle_DMR_04_F", 5000], // DLC Sniper Rifle
-	["ASP-1 Kir Rifle (Tan) [DLC]", "srifle_DMR_04_Tan_F", 5000], // DLC Sniper Rifle
+	["ASP-1 Kir Rifle (Black) [DLC]", "srifle_DMR_04_F", 3000], // DLC Sniper Rifle
+	["ASP-1 Kir Rifle (Tan) [DLC]", "srifle_DMR_04_Tan_F", 3000], // DLC Sniper Rifle
 	
 	// Sniper Rifles
 	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 2000],
@@ -647,8 +647,8 @@ allStoreGear = compileFinal str (call headArray + call uniformArray + call vestA
 genObjectsArray = compileFinal str
 [
 	//["Base Re-Locker", "Land_Portable_generator_F", 100000, "object"],  //Cael817, SNAFU,Used for base operations <-- Non destroyable
-	["Base Locker", "Land_Device_assembled_F", 50000, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
-	["Safe (PIN IS EMPTY)", "Box_NATO_AmmoVeh_F", 50000, "ammocrate"],
+	["Base Re-Locker", "Land_Device_assembled_F", 25000, "object"],  //Cael817, SNAFU,Used for base operations <-- Destroyable
+	["Safe (PIN IS EMPTY) !!BETA!!", "Box_NATO_AmmoVeh_F", 50000, "ammocrate"],
 	//["Empty Ammo Crate", "Box_NATO_Ammo_F", 200, "ammocrate"],
 	//["Metal Barrel", "Land_MetalBarrel_F", 25, "object"],
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
@@ -755,7 +755,7 @@ landArray = compileFinal str
 
 armoredArray = compileFinal str
 [
-	["Hunter", "B_MRAP_01_F", 5000, "vehicle"],
+	["Hunter", "B_MRAP_01_F", 4000, "vehicle"],
 	["Hunter HMG", "B_MRAP_01_hmg_F", 15000, "vehicle"],
 	["Hunter GMG", "B_MRAP_01_gmg_F", 17500, "vehicle"],
 	["Ifrit", "O_MRAP_02_F", 5000, "vehicle"],
@@ -1002,21 +1002,14 @@ customPlayerItems = compileFinal str
 [
 	["Water Bottle", "water", localize "STR_WL_ShopDescriptions_Water", "client\icons\waterbottle.paa", 30, 15],
 	["Canned Food", "cannedfood", localize "STR_WL_ShopDescriptions_CanFood", "client\icons\cannedfood.paa", 30, 15],
-
-	["LSD", "lsd", localize "STR_WL_ShopDescriptions_LSD", "client\icons\lsd.paa", 10000, 5000],
-	["Marijuana", "marijuana", localize "STR_WL_ShopDescriptions_Marijuana", "client\icons\marijuana.paa", 10000, 5000],
-	["Cocaine", "cocaine", localize "STR_WL_ShopDescriptions_Cocaine", "client\icons\cocaine.paa", 10000, 5000],
-	["Heroin", "heroin", localize "STR_WL_ShopDescriptions_Heroin", "client\icons\heroin.paa", 10000, 5000],
-
 	["Repair Kit", "repairkit", localize "STR_WL_ShopDescriptions_RepairKit", "client\icons\briefcase.paa", 750, 375],
 	["Jerry Can (Full)", "jerrycanfull", localize "STR_WL_ShopDescriptions_fuelFull", "client\icons\jerrycan.paa", 150, 75],
 	["Jerry Can (Empty)", "jerrycanempty", localize "STR_WL_ShopDescriptions_fuelEmpty", "client\icons\jerrycan.paa", 50, 25],
 	["Spawn Beacon", "spawnbeacon", localize "STR_WL_ShopDescriptions_spawnBeacon", "client\icons\spawnbeacon.paa", 5000, 2500],
-	//["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\camonet.paa", 200, 100],
+	["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\camonet.paa", 200, 100],
 	["Syphon Hose", "syphonhose", localize "STR_WL_ShopDescriptions_SyphonHose", "client\icons\syphonhose.paa", 200, 100],
-	//["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\energydrink.paa", 100, 50],
+	["Energy Drink", "energydrink", localize "STR_WL_ShopDescriptions_Energy_Drink", "client\icons\energydrink.paa", 100, 50],
 	["Warchest", "warchest", localize "STR_WL_ShopDescriptions_Warchest", "client\icons\warchest.paa", 1000, 500],
-	
 	["IP/Net Camera", "cctv_camera", localize "STR_WL_ShopDescriptions_CCTV_Camera", "addons\cctv\icons\camcorder.paa", 850, 500],
 	["Camera Terminal", "cctv_base", localize "STR_WL_ShopDescriptions_CCTV_Base", "addons\cctv\icons\laptop.paa", 500, 300]
 ];
