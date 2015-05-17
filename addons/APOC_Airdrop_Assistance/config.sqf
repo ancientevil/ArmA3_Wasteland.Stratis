@@ -10,7 +10,7 @@ APOC_AA_VehOptions =
 ["MH-9 Hummingbird",	"B_Heli_Light_01_F", 		10000,	 "vehicle"],
 ["Strider HMG", 		"I_MRAP_03_hmg_F", 			30000, 	 "vehicle"],
 ["MSE-3 Marid", 		"O_APC_Wheeled_02_rcws_F", 	50000,  "vehicle"],
-["MBT-52 Kuma", 		"I_MBT_03_cannon_F", 		200000,  "vehicle"]
+["MBT-52 Kuma", 		"I_MBT_03_cannon_F", 		99000,  "vehicle"]
 ];
 
 APOC_AA_SupOptions =
