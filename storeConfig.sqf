@@ -156,11 +156,12 @@ throwputArray = compileFinal str
 	["Smoke Grenade (Purple)", "SmokeShellPurple", 50],
 	["Smoke Grenade (Blue)", "SmokeShellBlue", 50],
 	["Smoke Grenade (Green)", "SmokeShellGreen", 50],
-	["Smoke Grenade (Yellow)", "SmokeShellYellow", 50],
+	//["Smoke Grenade (Yellow)", "SmokeShellYellow", 50],
 	["Smoke Grenade (Orange)", "SmokeShellOrange", 50],
 	["Smoke Grenade (Red)", "SmokeShellRed", 50],
 	["Mini Grenade", "MiniGrenade", 50],
 	["Frag Grenade", "HandGrenade", 100],
+	["Toxic Gas Grenade", "SmokeShellYellow", 750],
 	["IR Grenade [NATO]", "B_IR_Grenade", 150],
 	["IR Grenade [CSAT]", "O_IR_Grenade", 150],
 	["IR Grenade [AAF]", "I_IR_Grenade", 150],
@@ -296,9 +297,9 @@ accessoriesArray = compileFinal str
 	["Kahlia (Tan) [DLC]", "optic_KHS_tan", 500, "item"], // DLC Item
 	["LRPS", "optic_LRPS", 750, "item"],
 	["NVS", "optic_NVS", 1500, "item"],
-	["TWS", "optic_tws", 7500, "item"],
-	["TWS MG", "optic_tws_mg", 8500, "item"],
-	["Nightstalker", "optic_Nightstalker", 10000, "item"]
+	["TWS", "optic_tws", 29500, "item"],
+	["TWS MG", "optic_tws_mg", 18500, "item"],
+	["Nightstalker", "optic_Nightstalker", 30000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -322,7 +323,7 @@ headArray = compileFinal str
 	["MICH", "H_HelmetIA", 50, "hat"],
 	// ["MICH (Camo)", "H_HelmetIA_net", 50, "hat"],
 	// ["MICH 2 (Camo)", "H_HelmetIA_camo", 50, "hat"],
-	["Heli Crew Helmet (NATO)", "H_CrewHelmetHeli_B", 50, "hat"],
+	["Gasmask", "H_CrewHelmetHeli_B", 50, "hat"],
 	["Heli Crew Helmet (CSAT)", "H_CrewHelmetHeli_O", 50, "hat"],
 	["Heli Crew Helmet (AAF)", "H_CrewHelmetHeli_I", 50, "hat"],
 	["Heli Pilot Helmet (NATO)", "H_PilotHelmetHeli_B", 50, "hat"],
@@ -916,7 +917,9 @@ colorsArray = compileFinal str
 			["Sierra Whiskey Wild Dogs", _texDir + "swwd.jpg"],
 			["Skulls", _texDir + "skulls.jpg"],
 			["Zebra", _texDir + "zebra.jpg"],
-			["Hello Kitty", _texDir + "kitty.jpg"]
+			["Hello Kitty", _texDir + "kitty.jpg"],
+			["Sweden", _texDir + "sweden.jpg"],
+			["DADS", _texDir + "dads.jpg"]
 			
 		]
 	],

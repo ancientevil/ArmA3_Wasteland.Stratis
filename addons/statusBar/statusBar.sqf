@@ -73,7 +73,7 @@ disableSerialization;
 		_dir = round (getDir (vehicle player));
 		_grid = mapGridPosition  player; _xx = (format[_grid]) select  [0,3]; 
 		_yy = (format[_grid]) select  [3,3];  
-		_time = (round(180-(serverTime)/60));  //edit the '240' value (60*4=240) to change the countdown timer if your server restarts are shorter or longer than 4 hour intervals
+		_time = (round(360-(serverTime)/60));  //edit the '360' value (60*4=240) to change the countdown timer if your server restarts are shorter or longer than 4 hour intervals
 		_hours = (floor(_time/60));
 		_minutes = (_time - (_hours * 60));
 		
@@ -170,15 +170,15 @@ disableSerialization;
 		//display the information 
 		((uiNamespace getVariable "osefStatusBarAdmin")displayCtrl 55554)ctrlSetStructuredText parseText 
 			format["
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='client\icons\players.paa' color='%10'/> %2</t>
-			<t shadow='1' shadowColor='#000000' color='%11'><img size='1.0'  shadowColor='#000000' image='client\icons\health.paa' color='%11'/> %3%1</t> 
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.0'  shadowColor='#000000' image='client\icons\money.paa' color='%10'/> $%4</t> 
-			<t shadow='1' shadowColor='#000000' color='%12'><img size='1.6'  shadowColor='#000000' image='client\icons\hunger.paa' color='%12'/> %5%1</t> 
-			<t shadow='1' shadowColor='#000000' color='%13'><img size='1.6'  shadowColor='#000000' image='client\icons\thirst.paa' color='%13'/> %6%1</t> 
-			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\atm.paa' color='%10'/> $%9</t> 
-			<t shadow='1' shadowColor='#000000' color='%10'>FPS: %7</t>
-			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\compass.paa' color='%10'/> %17</t> 
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='client\icons\restart.paa' color='%10'/>%18:%19</t>",
+            <t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.6'  shadowColor='#000000' image='client\icons\players.paa' color='%10'/> %2</t>
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\health.paa' color='%13'/> %3%1</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\money.paa' color='%10'/> $%4</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.6'  shadowColor='#000000' image='client\icons\hunger.paa' color='%12'/> %5%1</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.6'  shadowColor='#000000' image='client\icons\thirst.paa' color='%13'/> %6%1</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\atm.paa' color='%10'/> $%9</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'>FPS: %7</t>
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.0'  shadowColor='#000000' image='client\icons\compass.paa' color='%10'/> %17</t> 
+			<t shadow='1' shadowColor='#9900FF' color='%15'><img size='1.6'  shadowColor='#000000' image='client\icons\restart.paa' color='%10'/>%18:%19</t>",
 			
 					"%", 
 					count playableUnits,
