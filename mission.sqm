@@ -598,10 +598,10 @@ class Mission
 					position[]={3745.6479,8.7258854,7954.2583};
 					id=23;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -674,13 +674,13 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={3744.6445,8.6039543,7954.3926};
+					position[]={3744.6643,8.6080513,7954.3335};
 					id=30;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -756,10 +756,10 @@ class Mission
 					position[]={3746.4333,8.7691116,7954.3423};
 					id=37;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -835,10 +835,10 @@ class Mission
 					position[]={3747.1689,8.8159351,7954.292};
 					id=44;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -914,10 +914,10 @@ class Mission
 					position[]={3747.9211,8.8516712,7954.3755};
 					id=51;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -993,10 +993,10 @@ class Mission
 					position[]={3748.6731,8.8213902,7954.4258};
 					id=58;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
@@ -1062,10 +1062,10 @@ class Mission
 					position[]={3749.4922,8.7800493,7954.4756};
 					id=64;
 					side="WEST";
-					vehicle="B_engineer_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Engineer";
+					description="Medic";
 				};
 			};
 		};
