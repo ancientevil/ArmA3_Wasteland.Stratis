@@ -7,6 +7,7 @@
 			removeBackpack _player;
 			removeAllWeapons _player;
 			_player addBackpack "B_FieldPack_oucamo";
+			_player forceAddUniform "U_B_GhillieSuit";
 			_player addMagazine "10Rnd_762x54_Mag";
 			_player addMagazine "10Rnd_762x54_Mag";
 			_player addWeapon "srifle_DMR_01_SOS_F";
@@ -24,7 +25,7 @@
 			removeBackpack _player;
 			removeAllWeapons _player;
 			_player addBackpack "B_FieldPack_blk";
-
+			_player forceAddUniform "U_B_Wetsuit";
 			_player addMagazine "1Rnd_HE_Grenade_shell";
 			_player addMagazine "1Rnd_HE_Grenade_shell";
 			_player addMagazine "30Rnd_65x39_caseless_mag";
@@ -140,7 +141,7 @@
 			removeAllWeapons _player;
 			_player addVest "V_PlateCarrier1_blk";
 			_player addBackpack "B_AssaultPack_blk";
-			_player forceAddUniform "U_B_PilotCoveralls";
+			_player forceAddUniform "U_O_OfficerUniform_ocamo";
 			_player addItem "SmokeShellYellow";
 			_player addItem "SmokeShellYellow";
 			_player addItem "SmokeShellYellow";
@@ -151,7 +152,7 @@
 			_player addWeapon "MMG_02_black_F";
 			_player addPrimaryWeaponItem "optic_aco_smg";
 			_player addPrimaryWeaponItem "bipod_01_F_blk";
-			_player addHeadgear "H_PilotHelmetFighter_B";
+			_player addHeadgear "H_Beret_red";
 			};
 			
 			default
