@@ -87,7 +87,7 @@ if (hasInterface || isServer) then
 [] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";	// Mag Repacker
 [] execVM "addons\HvT\HvT.sqf"; 							// High Value Target
 [] execVM "addons\HvT\HvD.sqf"; 							// High Value Drugrunner
-
+[] execVM "addons\lvai.sqf";                                //AI script
 [] execVM "addons\scripts\intro.sqf";						// Welcome intro
 [] execVM "addons\ToxicGas\toxic_gas.sqf"; // teargass bitches !
 };
